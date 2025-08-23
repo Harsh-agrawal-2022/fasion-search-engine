@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fashion Search Engine Design System */
+
+@layer base {
+  :root {
+    /* Core background and text */
+    --background: 0 0% 100%;
+    --foreground: 235 20% 12%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 235 20% 12%;
+
+    /* Fashion brand colors - rich purple to pink gradient theme */
+    --primary: 280 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 285 100% 70%;
+
+    /* Secondary accent - warm coral */
+    --secondary: 340 75% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted tones for subtlety */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    /* Accent for highlights */
+    --accent: 280 60% 95%;
+    --accent-foreground: 280 85% 35%;
+
+    /* Interactive states */
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 280 85% 60%;
+
+    /* Fashion-specific colors */
+    --fashion-gradient: linear-gradient(135deg, hsl(280 85% 60%), hsl(320 80% 65%), hsl(340 75% 65%));
+    --fashion-gradient-subtle: linear-gradient(135deg, hsl(280 60% 95%), hsl(320 50% 96%));
+    
+    /* Sustainability green */
+    --sustainable: 142 76% 36%;
+    --sustainable-foreground: 0 0% 100%;
+
+    /* Shadows and effects */
+    --shadow-elegant: 0 10px 30px -10px hsl(280 85% 60% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(240 6% 10% / 0.1);
+    --shadow-hover: 0 20px 40px -8px hsl(280 85% 60% / 0.4);
+
+    /* Animation timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode fashion theme */
+    --background: 240 8% 8%;
+    --foreground: 240 5% 96%;
+
+    --card: 240 6% 12%;
+    --card-foreground: 240 5% 96%;
+
+    --primary: 285 100% 70%;
+    --primary-foreground: 240 8% 8%;
+    --primary-glow: 290 100% 75%;
+
+    --secondary: 345 80% 70%;
+    --secondary-foreground: 240 8% 8%;
+
+    --muted: 240 6% 15%;
+    --muted-foreground: 240 4% 65%;
+
+    --accent: 280 30% 20%;
+    --accent-foreground: 285 100% 70%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 15%;
+    --ring: 285 100% 70%;
+
+    /* Dark mode gradients */
+    --fashion-gradient: linear-gradient(135deg, hsl(285 100% 70%), hsl(325 85% 70%), hsl(345 80% 70%));
+    --fashion-gradient-subtle: linear-gradient(135deg, hsl(280 30% 20%), hsl(320 25% 18%));
+
+    /* Dark shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(285 100% 70% / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(240 8% 4% / 0.5);
+    --shadow-hover: 0 20px 40px -8px hsl(285 100% 70% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Fashion-specific component styles */
+  .fashion-gradient {
+    background: var(--fashion-gradient);
+  }
+
+  .fashion-gradient-subtle {
+    background: var(--fashion-gradient-subtle);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Product card hover effects */
+  .product-card {
+    @apply relative overflow-hidden rounded-xl bg-card shadow-card transition-smooth;
+  }
+
+  .product-card:hover {
+    @apply shadow-hover transform scale-[1.02];
+  }
+
+  .product-card:hover .product-image {
+    @apply transform scale-110;
+  }
+
+  .product-image {
+    @apply transition-smooth duration-500;
+  }
+
+  /* Fashion button variants */
+  .btn-fashion {
+    @apply fashion-gradient text-white font-medium px-6 py-3 rounded-lg shadow-elegant hover:shadow-hover transition-smooth hover:scale-105;
+  }
+
+  .btn-fashion-outline {
+    @apply border-2 border-primary text-primary bg-transparent hover:fashion-gradient hover:text-white transition-smooth;
+  }
+
+  /* Loading skeleton styles */
+  .skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+
+  .skeleton-text {
+    @apply skeleton h-4 w-full mb-2;
+  }
+
+  .skeleton-image {
+    @apply skeleton aspect-square w-full;
+  }
+}
