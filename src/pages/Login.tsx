@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Mail, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 
 const Login = () => {
+  
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
@@ -14,6 +15,7 @@ const Login = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -26,32 +28,33 @@ const Login = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // TODO: Replace with actual MongoDB integration
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Placeholder for MongoDB authentication
-      console.log('Login attempt:', formData);
-      
-      // Example API call structure for future MongoDB integration:
-      // const response = await fetch('/api/auth/login', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
-      
+      const response = await fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) throw new Error(data.message || "Login failed");
+
       toast({
         title: "Login Successful",
-        description: "Welcome back! (Static demo)",
+        description: `Welcome back, ${data.user?.name || 'User'}!`,
       });
-      
-      // TODO: Handle successful login - redirect, store token, etc.
-      
-    } catch (error) {
+
+      // Optional: store token or user data
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      // Redirect to dashboard or home
+      navigate("/");
+
+    } catch (error: any) {
       toast({
         title: "Login Failed",
-        description: "Please check your credentials.",
+        description: error.message || "Please check your credentials.",
         variant: "destructive",
       });
     } finally {
@@ -73,10 +76,9 @@ const Login = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Email */}
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-sm font-medium">
-                Email Address
-              </Label>
+              <Label htmlFor="email" className="text-sm font-medium">Email Address</Label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
                 <Input
@@ -92,10 +94,9 @@ const Login = () => {
               </div>
             </div>
 
+            {/* Password */}
             <div className="space-y-2">
-              <Label htmlFor="password" className="text-sm font-medium">
-                Password
-              </Label>
+              <Label htmlFor="password" className="text-sm font-medium">Password</Label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
                 <Input
@@ -118,6 +119,7 @@ const Login = () => {
               </div>
             </div>
 
+            {/* Remember & Forgot */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <input
@@ -125,23 +127,14 @@ const Login = () => {
                   type="checkbox"
                   className="rounded border-border text-primary focus:ring-primary"
                 />
-                <Label htmlFor="remember" className="text-sm text-muted-foreground">
-                  Remember me
-                </Label>
+                <Label htmlFor="remember" className="text-sm text-muted-foreground">Remember me</Label>
               </div>
-              <Link
-                to="/forgot-password"
-                className="text-sm text-primary hover:text-primary/80 transition-colors"
-              >
+              <Link to="/forgot-password" className="text-sm text-primary hover:text-primary/80 transition-colors">
                 Forgot password?
               </Link>
             </div>
 
-            <Button
-              type="submit"
-              className="w-full"
-              disabled={isLoading}
-            >
+            <Button type="submit" className="w-full" disabled={isLoading}>
               {isLoading ? 'Signing In...' : 'Sign In'}
             </Button>
           </form>
@@ -149,15 +142,13 @@ const Login = () => {
           <div className="mt-6 text-center">
             <p className="text-sm text-muted-foreground">
               Don't have an account?{' '}
-              <Link
-                to="/signup"
-                className="text-primary hover:text-primary/80 font-medium transition-colors"
-              >
+              <Link to="/signup" className="text-primary hover:text-primary/80 font-medium transition-colors">
                 Sign up
               </Link>
             </p>
           </div>
 
+          {/* Social Login */}
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">

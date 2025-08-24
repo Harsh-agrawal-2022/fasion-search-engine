@@ -41,9 +41,7 @@ const Search = () => {
     if (file) {
       setUploadedImage(file);
       const reader = new FileReader();
-      reader.onload = (e) => {
-        setImagePreview(e.target?.result as string);
-      };
+      reader.onload = (e) => setImagePreview(e.target?.result as string);
       reader.readAsDataURL(file);
     }
   }, []);
@@ -51,31 +49,22 @@ const Search = () => {
   const removeImage = useCallback(() => {
     setUploadedImage(null);
     setImagePreview(null);
-    if (fileInputRef.current) {
-      fileInputRef.current.value = '';
-    }
+    if (fileInputRef.current) fileInputRef.current.value = '';
   }, []);
 
   const handleSearch = useCallback(async () => {
     if (!searchText.trim() && !uploadedImage) return;
-
     setLoading(true);
     try {
       const formData = new FormData();
-      if (searchText.trim()) {
-        formData.append('text', searchText.trim());
-      }
-      if (uploadedImage) {
-        formData.append('image', uploadedImage);
-      }
+      if (searchText.trim()) formData.append('text', searchText.trim());
+      if (uploadedImage) formData.append('image', uploadedImage);
 
-      const response = await fetch('/api/search', {
-        method: 'POST',
-        body: formData,
-      });
-
+      const response = await fetch('http://localhost:5000/api/search', { method: 'POST', body: formData });
+      
       if (response.ok) {
         const results = await response.json();
+        console.log(results);
         setSearchResults(results);
       } else {
         console.error('Search failed:', response.statusText);
@@ -91,32 +80,17 @@ const Search = () => {
     setLoading(true);
     try {
       const searchParams = new URLSearchParams();
-      
-      // Add existing search parameters
       if (searchText.trim()) searchParams.append('text', searchText.trim());
-      
-      // Add filter parameters
       if (filters.priceRange) {
         searchParams.append('minPrice', filters.priceRange[0].toString());
         searchParams.append('maxPrice', filters.priceRange[1].toString());
       }
-      if (filters.colors.length > 0) {
-        searchParams.append('colors', filters.colors.join(','));
-      }
-      if (filters.categories.length > 0) {
-        searchParams.append('categories', filters.categories.join(','));
-      }
-      if (filters.brands.length > 0) {
-        searchParams.append('brands', filters.brands.join(','));
-      }
-      if (filters.sustainableOnly) {
-        searchParams.append('sustainable', 'true');
-      }
+      if (filters.colors.length) searchParams.append('colors', filters.colors.join(','));
+      if (filters.categories.length) searchParams.append('categories', filters.categories.join(','));
+      if (filters.brands.length) searchParams.append('brands', filters.brands.join(','));
+      if (filters.sustainableOnly) searchParams.append('sustainable', 'true');
 
-      const response = await fetch(`/api/search?${searchParams.toString()}`, {
-        method: 'GET',
-      });
-
+      const response = await fetch(`http://localhost:5000/api/search?${searchParams.toString()}`, { method: 'GET' });
       if (response.ok) {
         const results = await response.json();
         setSearchResults(results);
@@ -130,17 +104,13 @@ const Search = () => {
 
   const toggleComparison = useCallback((productId: string) => {
     setComparisonItems(prev => 
-      prev.includes(productId)
-        ? prev.filter(id => id !== productId)
-        : prev.length < 4 ? [...prev, productId] : prev
+      prev.includes(productId) ? prev.filter(id => id !== productId) : prev.length < 4 ? [...prev, productId] : prev
     );
   }, []);
 
   const toggleFavorite = useCallback((productId: string) => {
     setFavorites(prev => 
-      prev.includes(productId)
-        ? prev.filter(id => id !== productId)
-        : [...prev, productId]
+      prev.includes(productId) ? prev.filter(id => id !== productId) : [...prev, productId]
     );
   }, []);
 
@@ -295,7 +265,7 @@ const Search = () => {
                   : "grid-cols-1"
               )}>
                 {[...Array(8)].map((_, i) => (
-                  <ProductCardSkeleton key={i} />
+                  <ProductCardSkeleton key={`skeleton-${i}`} />
                 ))}
               </div>
             )}
@@ -308,9 +278,9 @@ const Search = () => {
                   ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                   : "grid-cols-1"
               )}>
-                {searchResults.products.map((product) => (
+                {searchResults.products.map((product, index) => (
                   <ProductCard
-                    key={product.id}
+                    key={product.id || `product-${index}`}
                     product={product}
                     onAddToCompare={toggleComparison}
                     onToggleFavorite={toggleFavorite}

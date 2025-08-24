@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Sparkles, Zap, Shield } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Search, Sparkles, Zap, Shield, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { HeroSkeleton } from '@/components/common/LoadingSkeleton';
 import fashionHero from '@/assets/fashion-hero.jpg';
@@ -17,13 +17,35 @@ interface HeroContent {
 }
 
 const Landing = () => {
+  const navigate = useNavigate();
   const [heroContent, setHeroContent] = useState<HeroContent | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  console.log(isLoggedIn);
+  // Check login status
+  useEffect(() => {
+    setIsLoggedIn(!!localStorage.getItem('token'));
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    setIsLoggedIn(false);
+    navigate('/login');
+  };
+
+  const handleStartSearch = () => {
+    if (isLoggedIn) {
+      navigate('/search');
+    } else {
+      alert('Please login first!');
+      navigate('/login');
+    }
+  };
 
   useEffect(() => {
     const fetchHeroContent = async () => {
       try {
-        // Placeholder API call for hero content
         const response = await fetch('/api/hero');
         if (response.ok) {
           const content = await response.json();
@@ -70,7 +92,6 @@ const Landing = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0">
           <img 
             src={fashionHero} 
@@ -79,7 +100,7 @@ const Landing = () => {
           />
           <div className="absolute inset-0 bg-fashion-gradient-subtle" />
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="text-center space-y-8">
             {loading ? (
@@ -105,12 +126,32 @@ const Landing = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Link to="/search">
-                    <Button size="lg" className="btn-fashion text-lg px-8 py-4 h-auto">
-                      <Search className="w-5 h-5 mr-2" />
-                      {heroContent?.ctaText || 'Start Searching'}
-                    </Button>
-                  </Link>
+                  {isLoggedIn ? (
+                    <>
+                      <Button size="lg" className="btn-fashion text-lg px-8 py-4 h-auto" onClick={handleStartSearch}>
+                        <Search className="w-5 h-5 mr-2" />
+                        {heroContent?.ctaText || 'Start Searching'}
+                      </Button>
+                      <Button size="lg" variant="outline" className="btn-fashion-outline text-lg px-8 py-4 h-auto flex items-center" onClick={handleLogout}>
+                        <LogOut className="w-5 h-5 mr-2" />
+                        Logout
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <Link to="/login">
+                        <Button size="lg" className="btn-fashion text-lg px-8 py-4 h-auto">
+                          <Search className="w-5 h-5 mr-2" />
+                          Start Searching
+                        </Button>
+                      </Link>
+                      <Link to="/signup">
+                        <Button size="lg" variant="outline" className="btn-fashion-outline text-lg px-8 py-4 h-auto">
+                          Sign Up
+                        </Button>
+                      </Link>
+                    </>
+                  )}
                   <Link to="/recommendations">
                     <Button variant="outline" size="lg" className="btn-fashion-outline text-lg px-8 py-4 h-auto">
                       <Sparkles className="w-5 h-5 mr-2" />
@@ -142,7 +183,7 @@ const Landing = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {(heroContent?.features || defaultFeatures).map((feature, index) => {
+            {(heroContent?.features || defaultFeatures).map((feature) => {
               const Icon = getFeatureIcon(feature.icon);
               return (
                 <div
@@ -176,16 +217,15 @@ const Landing = () => {
             <p className="text-xl text-white/90">
               Join thousands of fashion enthusiasts who've revolutionized their shopping experience
             </p>
-            <Link to="/search">
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="text-lg px-8 py-4 h-auto hover:scale-105 transition-transform"
-              >
-                <Search className="w-5 h-5 mr-2" />
-                Begin Your Fashion Journey
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              variant="secondary"
+              className="text-lg px-8 py-4 h-auto hover:scale-105 transition-transform"
+              onClick={handleStartSearch}
+            >
+              <Search className="w-5 h-5 mr-2" />
+              Begin Your Fashion Journey
+            </Button>
           </div>
         </div>
       </section>

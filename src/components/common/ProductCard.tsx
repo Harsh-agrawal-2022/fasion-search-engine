@@ -105,15 +105,15 @@ const ProductCard = ({
 
         {/* Tags */}
         <div className="flex flex-wrap gap-1">
-          {product.tags.slice(0, 3).map((tag) => (
+          {(product.tags || []).slice(0, 3).map((tag, idx) => (
             <span
-              key={tag}
+              key={`${tag}-${idx}`}
               className="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-full"
             >
               {tag}
             </span>
           ))}
-          {product.tags.length > 3 && (
+          {product.tags && product.tags.length > 3 && (
             <span className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-full">
               +{product.tags.length - 3}
             </span>
@@ -141,7 +141,7 @@ const ProductCard = ({
                   key={i}
                   className={cn(
                     "w-3 h-3 rounded-full",
-                    i < Math.floor(product.rating!)
+                    i < Math.floor(product.rating)
                       ? "bg-primary"
                       : "bg-muted"
                   )}

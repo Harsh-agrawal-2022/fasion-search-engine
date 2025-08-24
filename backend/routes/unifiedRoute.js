@@ -64,25 +64,39 @@ router.post("/", upload.single("image"), async (req, res) => {
     const textKeywords = query ? normalizeKeywords(query) : [];
     const maxPrice = extractPrice(query);
 
-    // Combine keywords based on what user provided
+    // Combine keywords from image + text
     const combinedKeywords = [...new Set([...imageKeywords, ...textKeywords])];
 
-    let mongoQuery = {};
-    if (combinedKeywords.length) {
-      const orQueries = combinedKeywords.map(kw => {
-        const regex = new RegExp(kw, "i");
-        return [
-          { name: regex },
-          { category: regex },
-          { colors: regex },
-          { brand: regex },
-          { occasion: regex }
-        ];
-      }).flat();
-      mongoQuery = { $or: orQueries };
+    // --- Structured Filters ---
+    const filters = [];
+
+    // Category filter
+    const categoryKeywords = ["shirt","dress","kurta","shoes","top","handbag","gown","saree","jeans"];
+    const categoryMatch = textKeywords.find(k => categoryKeywords.includes(k));
+    if (categoryMatch) filters.push({ category: categoryMatch });
+
+    // Color filter
+    const colorKeywords = ["red","blue","green","black","white","pink","yellow","brown","purple","grey","maroon"];
+    const colorMatch = textKeywords.find(k => colorKeywords.includes(k));
+    if (colorMatch) filters.push({ colors: colorMatch });
+
+    // Price filter
+    if (maxPrice) filters.push({ price: { $lte: maxPrice } });
+
+    // Other keywords (name, brand, occasion)
+    const otherKeywords = combinedKeywords.filter(k => k !== categoryMatch && k !== colorMatch);
+    if (otherKeywords.length) {
+      const orQueries = otherKeywords.map(kw => ({
+        $or: [
+          { name: new RegExp(kw, "i") },
+          { brand: new RegExp(kw, "i") },
+          { occasion: new RegExp(kw, "i") }
+        ]
+      }));
+      filters.push(...orQueries);
     }
 
-    if (maxPrice) mongoQuery.price = { $lte: maxPrice };
+    const mongoQuery = filters.length ? { $and: filters } : {};
 
     // Fetch products
     const products = await Product.find(mongoQuery).limit(50);
