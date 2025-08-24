@@ -1,129 +1,114 @@
-// backend/routes/searchFlexible.js
-import express from "express";
-import multer from "multer";
-import Product from "../models/Product.js";
-import { askGemini } from "../utils/geminiClient.js";
+import express from 'express';
+import Product from '../models/Product.js';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const router = express.Router();
-const storage = multer.memoryStorage();
-const upload = multer({ storage });
 
-// Helper: normalize keywords
-function normalizeKeywords(text) {
-  return text
-    .split(",")
-    .map(k => k.trim().toLowerCase())
-    .filter(k => k.length > 0)
-    .flatMap(k => k.split(/\s+/))
-    .map(k => k.replace(/[^a-z0-9]/gi, ""))
-    .filter(k => k.length > 2);
-}
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-// Helper: extract max price from query text
-function extractPrice(query) {
-  const match = query?.match(/under\s+(\d+)/i);
-  return match ? parseInt(match[1], 10) : null;
-}
+async function getAIRecommendations(userQuery) {
+    if (!userQuery) return [];
+    const prompt = `
+        You are a fashion search engine AI. Based on the user query "${userQuery}", 
+        list up to 20 product names and styles from a hypothetical fashion catalog that would be a great match.
+        Return ONLY a comma-separated list of these product names. 
+        For example: "Floral Maxi Dress, High-Waisted Denim Shorts, Linen Button-Up Shirt".
+    `;
 
-// Recommendations: by category or brand
-async function getRecommendations(product) {
-  if (!product) return [];
-  return Product.find({
-    _id: { $ne: product._id },
-    $or: [
-      { category: product.category },
-      { brand: product.brand }
-    ]
-  }).limit(5);
-}
-
-// Comparisons: similar price range
-async function getComparisons(product) {
-  if (!product) return [];
-  return Product.find({
-    _id: { $ne: product._id },
-    price: { $gte: product.price - 100, $lte: product.price + 100 }
-  }).limit(5);
-}
-
-// POST /api/search/flexible
-router.post("/", upload.single("image"), async (req, res) => {
-  try {
-    const { query } = req.body;
-    const imageFile = req.file;
-
-    let imageKeywords = [];
-    if (imageFile) {
-      const base64Image = imageFile.buffer.toString("base64");
-      const aiText = await askGemini(
-        `Describe this product image in keywords: ${base64Image}`
-      );
-      imageKeywords = normalizeKeywords(aiText);
+    try {
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const text = response.text();
+        return text.split(',').map(item => item.trim()).filter(item => item.length > 0);
+    } catch (error) {
+        console.error("Error fetching recommendations from Gemini:", error);
+        return [];
     }
+}
 
-    const textKeywords = query ? normalizeKeywords(query) : [];
-    const maxPrice = extractPrice(query);
+router.post('/', async (req, res) => {
+    try {
+        if (!req.body) {
+            return res.status(400).json({ error: 'Request body is missing.' });
+        }
 
-    // Combine keywords from image + text
-    const combinedKeywords = [...new Set([...imageKeywords, ...textKeywords])];
+        const { query, filters = {}, page = 1, limit = 12 } = req.body;
 
-    // --- Structured Filters ---
-    const filters = [];
+        // --- Step 1: Get AI Recommendations (if a query exists) ---
+        const recommendedProductNames = await getAIRecommendations(query);
 
-    // Category filter
-    const categoryKeywords = ["shirt","dress","kurta","shoes","top","handbag","gown","saree","jeans"];
-    const categoryMatch = textKeywords.find(k => categoryKeywords.includes(k));
-    if (categoryMatch) filters.push({ category: categoryMatch });
+        // --- Step 2: Build a More Robust Database Query ---
+        const dbQuery = {};
+        
+        // **NEW LOGIC:** Use an $or operator to combine a direct text search with AI results.
+        // This ensures that even if the AI finds nothing, we still search for the user's term.
+        if (query) {
+            const queryRegex = new RegExp(query, 'i');
+            const searchConditions = [
+                { name: queryRegex },
+                { description: queryRegex },
+                { brand: queryRegex },
+                { category: queryRegex },
+                { colors: queryRegex } // Search in the colors array
+            ];
+            
+            // If AI provides recommendations, add them to the search conditions
+            if (recommendedProductNames.length > 0) {
+                const aiRegexList = recommendedProductNames.map(name => new RegExp(name, 'i'));
+                searchConditions.push({ name: { $in: aiRegexList } });
+            }
+            
+            dbQuery.$or = searchConditions;
+        }
 
-    // Color filter
-    const colorKeywords = ["red","blue","green","black","white","pink","yellow","brown","purple","grey","maroon"];
-    const colorMatch = textKeywords.find(k => colorKeywords.includes(k));
-    if (colorMatch) filters.push({ colors: colorMatch });
+        // --- Step 3: Apply Structured Filters ---
+        // Filters are applied with $and to narrow down the results from the $or search.
+        const filterConditions = [];
+        if (filters.categories && filters.categories.length > 0) {
+            filterConditions.push({ category: { $in: filters.categories } });
+        }
+        if (filters.brands && filters.brands.length > 0) {
+            filterConditions.push({ brand: { $in: filters.brands } });
+        }
+        if (filters.colors && filters.colors.length > 0) {
+            filterConditions.push({ colors: { $in: filters.colors } });
+        }
+        if (filters.sizes && filters.sizes.length > 0) {
+            filterConditions.push({ availableSizes: { $in: filters.sizes } });
+        }
+        if (filters.price) {
+            const priceCondition = {};
+            if (filters.price.min != null) priceCondition.$gte = Number(filters.price.min);
+            if (filters.price.max != null) priceCondition.$lte = Number(filters.price.max);
+            if (Object.keys(priceCondition).length > 0) {
+                filterConditions.push({ price: priceCondition });
+            }
+        }
 
-    // Price filter
-    if (maxPrice) filters.push({ price: { $lte: maxPrice } });
+        // If there are any filter conditions, add them to the main query
+        if (filterConditions.length > 0) {
+            dbQuery.$and = filterConditions;
+        }
 
-    // Other keywords (name, brand, occasion)
-    const otherKeywords = combinedKeywords.filter(k => k !== categoryMatch && k !== colorMatch);
-    if (otherKeywords.length) {
-      const orQueries = otherKeywords.map(kw => ({
-        $or: [
-          { name: new RegExp(kw, "i") },
-          { brand: new RegExp(kw, "i") },
-          { occasion: new RegExp(kw, "i") }
-        ]
-      }));
-      filters.push(...orQueries);
+        // --- Step 4: Execute Query with Pagination ---
+        const count = await Product.countDocuments(dbQuery);
+        const products = await Product.find(dbQuery)
+            .limit(limit)
+            .skip(limit * (page - 1))
+            .sort({ createdAt: -1 });
+
+        res.json({
+            products,
+            page,
+            pages: Math.ceil(count / limit),
+            count
+        });
+
+    } catch (error) {
+        console.error('Error in unified search:', error);
+        res.status(500).json({ error: 'Server error during search' });
     }
-
-    const mongoQuery = filters.length ? { $and: filters } : {};
-
-    // Fetch products
-    const products = await Product.find(mongoQuery).limit(50);
-    const mainProduct = products[0] || null;
-
-    // Recommendations & Comparisons
-    const recommendations = await getRecommendations(mainProduct);
-    const comparisons = await getComparisons(mainProduct);
-
-    res.json({
-      success: true,
-      query,
-      imageUploaded: !!imageFile,
-      mode: imageFile && query ? "image+text" : imageFile ? "image-only" : "text-only",
-      imageKeywords,
-      textKeywords,
-      combinedKeywords,
-      maxPrice,
-      products,
-      recommendations,
-      comparisons
-    });
-
-  } catch (err) {
-    console.error("Flexible Search Error:", err);
-    res.status(500).json({ error: "Search failed" });
-  }
 });
 
 export default router;

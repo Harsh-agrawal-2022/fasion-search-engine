@@ -5,10 +5,8 @@ import morgan from 'morgan';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 import productRoutes from './routes/productRoutes.js';
-import aiSearchRoutes from './routes/aiSearch.js';
-import recommendRoutes from './routes/recommend.js';
-import brandCompareRoutes from './routes/brandCompare.js';
-import debugRoutes from "./routes/debug.js";
+
+
 import unifiedSearchRouter from "./routes/unifiedRoute.js";
 
 
@@ -34,10 +32,7 @@ app.use((err, req, res, next) => {
   console.error(err);
   res.status(500).json({ error: 'Server error' });
 });
-app.use("/api/search/ai", aiSearchRoutes);
-app.use("/api/recommend", recommendRoutes);
-app.use("/api/compare", brandCompareRoutes);
-app.use("/api/debug", debugRoutes);
+
 
 
 const PORT = process.env.PORT || 5000;

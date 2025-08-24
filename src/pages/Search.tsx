@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { Search as SearchIcon, Upload, X, Filter, Grid, List } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,112 +7,103 @@ import FilterSidebar from '@/components/common/FilterSidebar';
 import { ProductCardSkeleton } from '@/components/common/LoadingSkeleton';
 import { cn } from '@/lib/utils';
 
+// Assuming a product structure from your backend
+interface Product {
+  _id: string;
+  imageUrl: string;
+  brand: string;
+  name: string;
+  price: number;
+  // Add any other fields your ProductCard might need
+}
+
 interface SearchResults {
-  products: Array<{
-    id: string;
-    image: string;
-    brand: string;
-    name: string;
-    price: number;
-    originalPrice?: number;
-    tags: string[];
-    isSustainable?: boolean;
-    rating?: number;
-  }>;
-  total: number;
+  products: Product[];
+  count: number;
   page: number;
-  hasMore: boolean;
+  pages: number;
 }
 
 const Search = () => {
   const [searchText, setSearchText] = useState('');
-  const [uploadedImage, setUploadedImage] = useState<File | null>(null);
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  // Image upload functionality is complex with a JSON API, so we'll focus on text search first.
+  // const [uploadedImage, setUploadedImage] = useState<File | null>(null);
+  // const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [searchResults, setSearchResults] = useState<SearchResults | null>(null);
   const [loading, setLoading] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [comparisonItems, setComparisonItems] = useState<string[]>([]);
   const [favorites, setFavorites] = useState<string[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [activeFilters, setActiveFilters] = useState({}); // State to hold current filters
 
-  const handleImageUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      setUploadedImage(file);
-      const reader = new FileReader();
-      reader.onload = (e) => setImagePreview(e.target?.result as string);
-      reader.readAsDataURL(file);
-    }
-  }, []);
-
-  const removeImage = useCallback(() => {
-    setUploadedImage(null);
-    setImagePreview(null);
-    if (fileInputRef.current) fileInputRef.current.value = '';
-  }, []);
-
-  const handleSearch = useCallback(async () => {
-    if (!searchText.trim() && !uploadedImage) return;
+  // --- UNIFIED SEARCH FUNCTION ---
+  // This single function now handles all search and filter requests.
+  const executeSearch = useCallback(async (query: string, filters: any, page = 1) => {
     setLoading(true);
     try {
-      const formData = new FormData();
-      if (searchText.trim()) formData.append('text', searchText.trim());
-      if (uploadedImage) formData.append('image', uploadedImage);
+      const body = {
+        query: query,
+        filters: filters,
+        page: page,
+        limit: 12
+      };
 
-      const response = await fetch('http://localhost:5000/api/search', { method: 'POST', body: formData });
-      
+      const response = await fetch('http://localhost:5000/api/search', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // IMPORTANT: Set content type to JSON
+        },
+        body: JSON.stringify(body), // Send data as a JSON string
+      });
+
       if (response.ok) {
         const results = await response.json();
-        console.log(results);
-        setSearchResults(results);
+        // The backend returns 'count', let's rename it to 'total' for the frontend interface
+        setSearchResults({ ...results, total: results.count });
       } else {
-        console.error('Search failed:', response.statusText);
+        const errorData = await response.json();
+        console.error('Search failed:', response.statusText, errorData);
       }
     } catch (error) {
       console.error('Search error:', error);
     } finally {
       setLoading(false);
     }
-  }, [searchText, uploadedImage]);
+  }, []);
 
-  const handleFiltersChange = useCallback(async (filters: any) => {
-    setLoading(true);
-    try {
-      const searchParams = new URLSearchParams();
-      if (searchText.trim()) searchParams.append('text', searchText.trim());
-      if (filters.priceRange) {
-        searchParams.append('minPrice', filters.priceRange[0].toString());
-        searchParams.append('maxPrice', filters.priceRange[1].toString());
-      }
-      if (filters.colors.length) searchParams.append('colors', filters.colors.join(','));
-      if (filters.categories.length) searchParams.append('categories', filters.categories.join(','));
-      if (filters.brands.length) searchParams.append('brands', filters.brands.join(','));
-      if (filters.sustainableOnly) searchParams.append('sustainable', 'true');
+  // --- EVENT HANDLERS ---
 
-      const response = await fetch(`http://localhost:5000/api/search?${searchParams.toString()}`, { method: 'GET' });
-      if (response.ok) {
-        const results = await response.json();
-        setSearchResults(results);
-      }
-    } catch (error) {
-      console.error('Filter search error:', error);
-    } finally {
-      setLoading(false);
-    }
-  }, [searchText]);
+  // Initial search when user presses Enter or clicks the search button
+  const handleSearch = () => {
+    if (!searchText.trim()) return;
+    // Reset filters for a new search
+    setActiveFilters({}); 
+    executeSearch(searchText.trim(), {});
+  };
+
+  // Called when filters are changed in the sidebar
+  const handleFiltersChange = (newFilters: any) => {
+    setActiveFilters(newFilters);
+    executeSearch(searchText.trim(), newFilters);
+  };
+
+  // --- Helper functions for toggling UI elements ---
 
   const toggleComparison = useCallback((productId: string) => {
-    setComparisonItems(prev => 
+    setComparisonItems(prev =>
       prev.includes(productId) ? prev.filter(id => id !== productId) : prev.length < 4 ? [...prev, productId] : prev
     );
   }, []);
 
   const toggleFavorite = useCallback((productId: string) => {
-    setFavorites(prev => 
+    setFavorites(prev =>
       prev.includes(productId) ? prev.filter(id => id !== productId) : [...prev, productId]
     );
   }, []);
+  
+  // Note: Image upload logic has been commented out to focus on the primary text search fix.
+  // Implementing image search would require a different backend setup (like multipart/form-data handling).
 
   return (
     <div className="min-h-screen bg-background">
@@ -124,7 +115,7 @@ const Search = () => {
               Search Fashion
             </h1>
             <p className="text-muted-foreground">
-              Use text, images, or both to find your perfect style
+              Use text to find your perfect style
             </p>
           </div>
 
@@ -141,29 +132,10 @@ const Search = () => {
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
               />
             </div>
-
-            {/* Image Upload */}
             <div className="flex gap-2">
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/*"
-                onChange={handleImageUpload}
-                className="hidden"
-              />
-              <Button
-                variant={uploadedImage ? "default" : "outline"}
-                size="lg"
-                onClick={() => fileInputRef.current?.click()}
-                className="h-14 px-6"
-              >
-                <Upload className="w-5 h-5 mr-2" />
-                {uploadedImage ? 'Change Image' : 'Upload Image'}
-              </Button>
-              
               <Button
                 onClick={handleSearch}
-                disabled={!searchText.trim() && !uploadedImage}
+                disabled={!searchText.trim()}
                 size="lg"
                 className="btn-fashion h-14 px-8"
               >
@@ -172,27 +144,6 @@ const Search = () => {
               </Button>
             </div>
           </div>
-
-          {/* Image Preview */}
-          {imagePreview && (
-            <div className="flex justify-center">
-              <div className="relative">
-                <img
-                  src={imagePreview}
-                  alt="Search image"
-                  className="w-32 h-32 object-cover rounded-lg border-2 border-border"
-                />
-                <Button
-                  size="icon"
-                  variant="destructive"
-                  onClick={removeImage}
-                  className="absolute -top-2 -right-2 w-6 h-6 rounded-full"
-                >
-                  <X className="w-3 h-3" />
-                </Button>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Search Results */}
@@ -202,7 +153,7 @@ const Search = () => {
             isOpen={showFilters}
             onClose={() => setShowFilters(false)}
             onFiltersChange={handleFiltersChange}
-            className="hidden lg:block lg:relative"
+            className={cn("hidden lg:block lg:relative", { 'block': showFilters })}
           />
 
           {/* Results Section */}
@@ -222,7 +173,7 @@ const Search = () => {
                   
                   {searchResults && (
                     <p className="text-muted-foreground">
-                      {searchResults.total} results found
+                      {searchResults.count} results found
                     </p>
                   )}
                 </div>
@@ -278,14 +229,22 @@ const Search = () => {
                   ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                   : "grid-cols-1"
               )}>
-                {searchResults.products.map((product, index) => (
+                {searchResults.products.map((product) => (
                   <ProductCard
-                    key={product.id || `product-${index}`}
-                    product={product}
+                    key={product._id}
+                    // The product object from the backend needs to match what ProductCard expects
+                    product={{ 
+                        id: product._id, 
+                        image: product.imageUrl, 
+                        brand: product.brand,
+                        name: product.name,
+                        price: product.price,
+                        tags: [], // Add tags if available in your backend model
+                    }}
                     onAddToCompare={toggleComparison}
                     onToggleFavorite={toggleFavorite}
-                    isFavorite={favorites.includes(product.id)}
-                    isInComparison={comparisonItems.includes(product.id)}
+                    isFavorite={favorites.includes(product._id)}
+                    isInComparison={comparisonItems.includes(product._id)}
                     className={viewMode === 'list' ? 'flex flex-row' : ''}
                   />
                 ))}
@@ -300,21 +259,13 @@ const Search = () => {
                   Start Your Fashion Search
                 </h3>
                 <p className="text-muted-foreground">
-                  Enter a description or upload an image to find similar styles
+                  Enter a description to find your perfect style
                 </p>
               </div>
             )}
           </div>
         </div>
       </div>
-
-      {/* Mobile Filter Sidebar */}
-      <FilterSidebar
-        isOpen={showFilters}
-        onClose={() => setShowFilters(false)}
-        onFiltersChange={handleFiltersChange}
-        className="lg:hidden"
-      />
     </div>
   );
 };
