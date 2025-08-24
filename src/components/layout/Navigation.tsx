@@ -18,7 +18,7 @@ const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
     { path: '/', label: 'Home', icon: Home, protected: false },
     { path: '/search', label: 'Search', icon: Search, protected: true },
     { path: '/compare', label: 'Compare', icon: BarChart3, protected: true },
-    { path: '/recommendations', label: 'Discover', icon: Heart, protected: true },
+  
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -57,7 +57,7 @@ const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
               <Search className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold bg-fashion-gradient bg-clip-text text-transparent">
-              StyleSearch
+              Ayaada
             </span>
           </div>
 

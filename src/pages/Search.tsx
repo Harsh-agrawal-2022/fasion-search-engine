@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { Search as SearchIcon, X, Filter, Grid, List, Mic, MicOff, Upload } from 'lucide-react';
+import { Search as SearchIcon, X, Filter, Grid, List, Mic, MicOff, Upload, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import ProductCard from '@/components/common/ProductCard';
@@ -10,10 +10,11 @@ import { cn } from '@/lib/utils';
 // Assuming a product structure from your backend
 interface Product {
   _id: string;
-  imageUrl: string;
+  img: string; // Corrected from imageUrl to img
   brand: string;
   name: string;
   price: number;
+  tags?: string[]; // Making tags optional as they might not always be present
 }
 
 interface SearchResults {
@@ -50,6 +51,7 @@ const Search = () => {
   const executeSearch = useCallback(async (query: string, image: File | null, filters: any, page = 1) => {
     if (!query.trim() && !image) return;
     setLoading(true);
+    setSearchResults(null); // Clear previous results
     try {
         let body: FormData | string;
         let headers: HeadersInit = {};
@@ -83,14 +85,15 @@ const Search = () => {
 
       if (response.ok) {
         const results = await response.json();
-        // --- FIX: Set the results directly as they match the interface ---
         setSearchResults(results);
       } else {
         const errorData = await response.json();
         console.error('Search failed:', response.statusText, errorData);
+        setSearchResults({ products: [], count: 0, page: 1, pages: 0 }); // Set to empty results on error
       }
     } catch (error) {
       console.error('Search error:', error);
+      setSearchResults({ products: [], count: 0, page: 1, pages: 0 }); // Set to empty results on error
     } finally {
       setLoading(false);
     }
@@ -98,8 +101,8 @@ const Search = () => {
 
   // --- EVENT HANDLERS ---
   const handleSearch = () => {
-    setActiveFilters({}); 
-    executeSearch(searchText.trim(), uploadedImage, {});
+    // When initiating a new search, we pass the current state
+    executeSearch(searchText.trim(), uploadedImage, activeFilters);
   };
 
   const handleFiltersChange = (newFilters: any) => {
@@ -150,6 +153,7 @@ const Search = () => {
     recognition.onresult = (event) => {
       const transcript = event.results[0][0].transcript;
       setSearchText(transcript);
+      // Automatically trigger search after speech is recognized
       executeSearch(transcript, uploadedImage, activeFilters);
     };
     
@@ -175,6 +179,15 @@ const Search = () => {
       prev.includes(productId) ? prev.filter(id => id !== productId) : [...prev, productId]
     );
   }, []);
+
+  // --- Function to navigate to the comparison page ---
+  const handleGoToCompare = () => {
+    if (comparisonItems.length > 0) {
+        const ids = comparisonItems.join(',');
+        // This assumes your routing is set up for a '/compare' page
+        window.location.href = `/compare?ids=${ids}`;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -259,7 +272,7 @@ const Search = () => {
           )}
         </div>
 
-        <div className="flex gap-6">
+        <div className="flex flex-col lg:flex-row gap-6">
           <FilterSidebar
             isOpen={showFilters}
             onClose={() => setShowFilters(false)}
@@ -286,6 +299,12 @@ const Search = () => {
                     </p>
                   )}
                 </div>
+                {comparisonItems.length > 0 && (
+                    <Button onClick={handleGoToCompare}>
+                        Compare ({comparisonItems.length})
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                )}
               </div>
             )}
 
@@ -315,7 +334,7 @@ const Search = () => {
                     key={product._id}
                     product={{ 
                         id: product._id, 
-                        image: product.imageUrl, 
+                        image: product.img, // Corrected from product.imageUrl
                         brand: product.brand,
                         name: product.name,
                         price: product.price,

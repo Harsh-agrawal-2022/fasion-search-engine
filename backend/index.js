@@ -6,6 +6,7 @@ import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 import productRoutes from './routes/productRoutes.js';
 import unifiedaiSearchRouter from './routes/aiImage.js'
+import compareRouter from './routes/compare.js';
 
 
 import unifiedSearchRouter from "./routes/unifiedRoute.js";
@@ -27,6 +28,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use("/api/search", unifiedSearchRouter);
 app.use("/api/ai-image", unifiedaiSearchRouter);
+app.use("/api/compare", compareRouter);
 
 
 // error fallback

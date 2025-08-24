@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Search, Sparkles, Zap, Shield, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -21,8 +21,8 @@ const Landing = () => {
   const [heroContent, setHeroContent] = useState<HeroContent | null>(null);
   const [loading, setLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  console.log(isLoggedIn);
-  // Check login status
+
+  // Check login status on component mount
   useEffect(() => {
     setIsLoggedIn(!!localStorage.getItem('token'));
   }, []);
@@ -31,26 +31,39 @@ const Landing = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     setIsLoggedIn(false);
+    // You might want to navigate to the homepage or login page after logout
     navigate('/login');
-  };
-
-  const handleStartSearch = () => {
-    if (isLoggedIn) {
-      navigate('/search');
-    } else {
-      alert('Please login first!');
-      navigate('/login');
-    }
   };
 
   useEffect(() => {
     const fetchHeroContent = async () => {
+      setLoading(true);
       try {
-        const response = await fetch('/api/hero');
-        if (response.ok) {
-          const content = await response.json();
-          setHeroContent(content);
-        }
+        // This is a placeholder for fetching dynamic content.
+        // In a real app, you would fetch this from your backend.
+        const content: HeroContent = {
+            title: "Discover Fashion<br/><span class='bg-fashion-gradient bg-clip-text text-transparent'>Like Never Before</span>",
+            subtitle: "AI-powered search engine that understands your style. Search with text, images, or both to find your perfect fashion match.",
+            ctaText: "Begin Your Fashion Journey",
+            features: [
+                {
+                  icon: 'search',
+                  title: 'AI-Powered Search',
+                  description: "Find exactly what you're looking for with intelligent text and image search"
+                },
+                {
+                  icon: 'sparkles',
+                  title: 'Smart Recommendations',
+                  description: "Discover new styles tailored to your unique taste and preferences"
+                },
+                {
+                  icon: 'shield',
+                  title: 'Sustainable Choices',
+                  description: 'Shop consciously with our sustainability tracking and eco-friendly options'
+                }
+            ]
+        };
+        setHeroContent(content);
       } catch (error) {
         console.error('Failed to fetch hero content:', error);
       } finally {
@@ -65,12 +78,12 @@ const Landing = () => {
     {
       icon: 'search',
       title: 'AI-Powered Search',
-      description: 'Find exactly what you\'re looking for with intelligent text and image search'
+      description: "Find exactly what you're looking for with intelligent text and image search"
     },
     {
       icon: 'sparkles',
       title: 'Smart Recommendations',
-      description: 'Discover new styles tailored to your unique taste and preferences'
+      description: "Discover new styles tailored to your unique taste and preferences"
     },
     {
       icon: 'shield',
@@ -108,16 +121,9 @@ const Landing = () => {
             ) : (
               <>
                 <div className="space-y-4">
-                  <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground">
-                    {heroContent?.title || (
-                      <>
-                        Discover Fashion
-                        <span className="bg-fashion-gradient bg-clip-text text-transparent block">
-                          Like Never Before
-                        </span>
-                      </>
-                    )}
-                  </h1>
+                  <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground" 
+                      dangerouslySetInnerHTML={{ __html: heroContent?.title || "Discover Fashion<br/><span class='bg-fashion-gradient bg-clip-text text-transparent'>Like Never Before</span>" }}
+                  />
                   <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto">
                     {heroContent?.subtitle || 
                       'AI-powered search engine that understands your style. Search with text, images, or both to find your perfect fashion match.'
@@ -126,38 +132,27 @@ const Landing = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  {isLoggedIn ? (
-                    <>
-                      <Button size="lg" className="btn-fashion text-lg px-8 py-4 h-auto" onClick={handleStartSearch}>
-                        <Search className="w-5 h-5 mr-2" />
-                        {heroContent?.ctaText || 'Start Searching'}
-                      </Button>
-                      <Button size="lg" variant="outline" className="btn-fashion-outline text-lg px-8 py-4 h-auto flex items-center" onClick={handleLogout}>
-                        <LogOut className="w-5 h-5 mr-2" />
-                        Logout
-                      </Button>
-                    </>
-                  ) : (
-                    <>
-                      <Link to="/login">
-                        <Button size="lg" className="btn-fashion text-lg px-8 py-4 h-auto">
-                          <Search className="w-5 h-5 mr-2" />
-                          Start Searching
+                    {isLoggedIn ? (
+                        <>
+                            <Button asChild size="lg" className="btn-fashion text-lg px-8 py-4 h-auto">
+                                <Link to="/search">
+                                    <Search className="w-5 h-5 mr-2" />
+                                    Start Searching
+                                </Link>
+                            </Button>
+                            <Button onClick={handleLogout} variant="outline" size="lg" className="h-auto py-4 px-8">
+                                <LogOut className="w-5 h-5 mr-2" />
+                                Logout
+                            </Button>
+                        </>
+                    ) : (
+                        <Button asChild size="lg" className="btn-fashion text-lg px-8 py-4 h-auto">
+                            <Link to="/login">
+                                <Zap className="w-5 h-5 mr-2" />
+                                Login to Start
+                            </Link>
                         </Button>
-                      </Link>
-                      <Link to="/signup">
-                        <Button size="lg" variant="outline" className="btn-fashion-outline text-lg px-8 py-4 h-auto">
-                          Sign Up
-                        </Button>
-                      </Link>
-                    </>
-                  )}
-                  <Link to="/recommendations">
-                    <Button variant="outline" size="lg" className="btn-fashion-outline text-lg px-8 py-4 h-auto">
-                      <Sparkles className="w-5 h-5 mr-2" />
-                      Discover Styles
-                    </Button>
-                  </Link>
+                    )}
                 </div>
               </>
             )}
@@ -175,7 +170,7 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-              Why Choose StyleSearch?
+              Why Choose Ayaada?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Experience the future of fashion discovery with cutting-edge AI technology
@@ -217,14 +212,11 @@ const Landing = () => {
             <p className="text-xl text-white/90">
               Join thousands of fashion enthusiasts who've revolutionized their shopping experience
             </p>
-            <Button 
-              size="lg" 
-              variant="secondary"
-              className="text-lg px-8 py-4 h-auto hover:scale-105 transition-transform"
-              onClick={handleStartSearch}
-            >
-              <Search className="w-5 h-5 mr-2" />
-              Begin Your Fashion Journey
+            <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-4 h-auto hover:scale-105 transition-transform">
+                <Link to={isLoggedIn ? "/search" : "/login"}>
+                    <Search className="w-5 h-5 mr-2" />
+                    {isLoggedIn ? "Begin Your Fashion Journey" : "Login to Get Started"}
+                </Link>
             </Button>
           </div>
         </div>
