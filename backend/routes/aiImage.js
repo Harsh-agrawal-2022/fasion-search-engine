@@ -6,6 +6,7 @@ import multer from 'multer';
 const router = express.Router();
 
 // --- Multer Setup for Image Uploads ---
+// This will store the uploaded file in memory as a buffer
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
@@ -24,7 +25,7 @@ async function getInfoFromImageAI(imageBuffer) {
         const imagePart = {
             inlineData: {
                 data: imageBuffer.toString("base64"),
-                mimeType: "image/jpeg",
+                mimeType: "image/jpeg", // Assuming jpeg, multer can provide the actual type
             },
         };
         const result = await model.generateContent([prompt, imagePart]);
@@ -32,7 +33,7 @@ async function getInfoFromImageAI(imageBuffer) {
         return response.text().trim();
     } catch (error) {
         console.error("Error analyzing image with AI:", error);
-        return "";
+        return ""; // Return empty string on error
     }
 }
 
@@ -43,6 +44,7 @@ async function getInfoFromImageAI(imageBuffer) {
  * @returns {Promise<object>} - A structured object with search terms, filters, and suggestions.
  */
 async function parseAndExpandQuery(userQuery) {
+    // This function remains the same as before
     if (!userQuery || !userQuery.trim()) {
         return { searchTerms: '', filters: {}, suggestions: [] };
     }
@@ -73,23 +75,12 @@ async function parseAndExpandQuery(userQuery) {
 }
 
 
+// --- UPDATED ROUTE: Now handles image uploads with `upload.single('image')` ---
 router.post('/', upload.single('image'), async (req, res) => {
     try {
+        // req.body will contain text fields, req.file will contain the image
         const rawQuery = req.body.query || '';
-        
-        // --- FIX STARTS HERE ---
-        // Check if filters is a string (from FormData) before parsing.
-        // If it's an object (from a JSON request), use it directly.
-        let manualFilters = {};
-        if (req.body.filters) {
-            if (typeof req.body.filters === 'string') {
-                manualFilters = JSON.parse(req.body.filters);
-            } else {
-                manualFilters = req.body.filters;
-            }
-        }
-        // --- FIX ENDS HERE ---
-
+        const manualFilters = req.body.filters ? JSON.parse(req.body.filters) : {};
         const { page = 1, limit = 12 } = req.body;
 
         let imageSearchTerms = '';
@@ -99,9 +90,11 @@ router.post('/', upload.single('image'), async (req, res) => {
 
         const textParsed = await parseAndExpandQuery(rawQuery);
         
+        // Combine search terms from both image and text for a powerful search
         const combinedSearchTerms = `${imageSearchTerms} ${textParsed.searchTerms}`.trim();
         const combinedFilters = { ...textParsed.filters, ...manualFilters };
         
+        // --- Database Query Logic (remains the same) ---
         const dbQuery = {};
         const filterConditions = [];
 
@@ -131,20 +124,12 @@ router.post('/', upload.single('image'), async (req, res) => {
             dbQuery.$and = filterConditions;
         }
 
-        const projection = combinedSearchTerms ? { score: { $meta: "textScore" } } : {};
-        
+        const projection = { score: { $meta: "textScore" } };
         const count = await Product.countDocuments(dbQuery);
-        const productsQuery = Product.find(dbQuery, projection)
+        const products = await Product.find(dbQuery, projection)
+            .sort({ score: { $meta: "textScore" } })
             .limit(limit)
             .skip(limit * (page - 1));
-
-        if (combinedSearchTerms) {
-            productsQuery.sort({ score: { $meta: "textScore" } });
-        } else {
-            productsQuery.sort({ createdAt: -1 });
-        }
-
-        const products = await productsQuery;
 
         res.json({
             products,
