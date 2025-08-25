@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
+AYAADA – Your Personal AI Fashion Stylist 👗🤖
+📌 Project Description
 
-## Project info
+AYAADA is more than just a search engine; it’s your AI-powered personal fashion stylist.
+It integrates products from multiple e-commerce platforms, understands natural language + image inputs, and delivers personalized recommendations, cross-brand comparisons, and sustainable fashion options.
 
-**URL**: https://lovable.dev/projects/6552dd6b-4196-4f18-9342-8aa64bed165f
+Think of it as “Shazam for Fashion” — upload a photo, type your query, or ask via voice, and AYAADA finds the perfect outfit, accessories, and even eco-friendly alternatives.
 
-## How can I edit this code?
+🛠 Technologies Used
 
-There are several ways of editing your application.
+Frontend: React, Tailwind CSS, TypeScript, Radix UI
 
-**Use Lovable**
+Backend: Node.js, Express, Zod
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6552dd6b-4196-4f18-9342-8aa64bed165f) and start prompting.
+Database: MongoDB
 
-Changes made via Lovable will be committed automatically to this repo.
+AI Core: Gemini API (multimodal intent-aware search), Google Generative AI
 
-**Use your preferred IDE**
+Integrations: E-commerce APIs (Myntra, Ajio, Meesho)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Future Tech: ARKit / WebAR for Virtual Try-On
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+🚧 Challenges Faced
 
-Follow these steps:
+Difficulty in fetching real-time data from e-commerce platforms (API limitations)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Ensuring fast and accurate hybrid search (text + image)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Building a scalable recommendation engine for personalized results
 
-# Step 3: Install the necessary dependencies.
-npm i
+Maintaining data consistency across multiple sources
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Designing a seamless user experience with minimal friction
 
-**Edit a file directly in GitHub**
+🔮 What’s Next
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Virtual Try-On using ARKit/WebAR
 
-**Use GitHub Codespaces**
+AI-based Social Trend Analysis for detecting trending outfits
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Universal AI Stylist for all occasions (weddings, office, festivals, casual)
 
-## What technologies are used for this project?
+Deeper Personalization using wardrobe history & preferences
 
-This project is built with:
+Eco-Friendly Fashion Focus – making sustainable options more accessible
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+👨‍💻 Team – DriveFusion
 
-## How can I deploy this project?
+Harsh Agrawal (Team Leader)
 
-Simply open [Lovable](https://lovable.dev/projects/6552dd6b-4196-4f18-9342-8aa64bed165f) and click on Share -> Publish.
+Saumya Sharma
 
-## Can I connect a custom domain to my Lovable project?
+Bhola Goyal
 
-Yes, you can!
+Gaurav
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Vardan
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+✨ Today we built a smarter search engine. Tomorrow, we’re building India’s AI Stylist.
