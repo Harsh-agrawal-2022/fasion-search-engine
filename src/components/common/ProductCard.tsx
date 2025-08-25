@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 interface ProductCardProps {
   product: {
     id: string;
-    image: string;
+    img: string;
     brand: string;
     name: string;
     price: number;
@@ -41,7 +41,7 @@ const ProductCard = ({
       {/* Image Container */}
       <div className="relative aspect-square overflow-hidden rounded-lg bg-muted">
         <img
-          src={product.image}
+          src={product.img}
           alt={`${product.brand} ${product.name}`}
           className={cn(
             "product-image w-full h-full object-cover transition-all duration-500",

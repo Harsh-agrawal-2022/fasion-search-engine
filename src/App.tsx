@@ -12,6 +12,8 @@ import Recommendations from "./pages/Recommendations";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
+import ProductDetail from './pages/ProductDetails';
+
 
 const queryClient = new QueryClient();
 
@@ -57,6 +59,8 @@ const App = () => {
               <Route path="/recommendations" element={<Recommendations />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/product/:id" element={<ProductDetail />} />
+
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

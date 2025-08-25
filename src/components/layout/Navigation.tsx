@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Search, Heart, BarChart3, Home, Moon, Sun, Menu, X, LogIn, UserPlus, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '../../assets/logo.jpg';
 
 interface NavigationProps {
   darkMode: boolean;
@@ -53,8 +54,8 @@ const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
             onClick={() => navigate('/')}
           >
-            <div className="w-8 h-8 bg-fashion-gradient rounded-lg flex items-center justify-center">
-              <Search className="w-5 h-5 text-white" />
+            <div className="w-8 h-8  bg-transparent flex items-center justify-center">
+              <img src={logo} alt="Logo" className="w-6 h-6" />
             </div>
             <span className="text-xl font-bold bg-fashion-gradient bg-clip-text text-transparent">
               Ayaada

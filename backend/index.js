@@ -10,6 +10,7 @@ import compareRouter from './routes/compare.js';
 
 
 import unifiedSearchRouter from "./routes/unifiedRoute.js";
+import productDetailRouter from './routes/productDetail.js';
 
 
 dotenv.config();
@@ -29,7 +30,7 @@ app.use('/api/products', productRoutes);
 app.use("/api/search", unifiedSearchRouter);
 app.use("/api/ai-image", unifiedaiSearchRouter);
 app.use("/api/compare", compareRouter);
-
+app.use("/api/products", productDetailRouter);
 
 // error fallback
 app.use((err, req, res, next) => {

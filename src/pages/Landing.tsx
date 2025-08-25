@@ -121,7 +121,7 @@ const Landing = () => {
             ) : (
               <>
                 <div className="space-y-4">
-                  <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground" 
+                  <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground bg-" 
                       dangerouslySetInnerHTML={{ __html: heroContent?.title || "Discover Fashion<br/><span class='bg-fashion-gradient bg-clip-text text-transparent'>Like Never Before</span>" }}
                   />
                   <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto">

@@ -10,16 +10,10 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
 
-/**
- * @description Analyzes an image to identify fashion items and generate search terms.
- * @param {Buffer} imageBuffer - The image file buffer from multer.
- * @returns {Promise<string>} - A descriptive string of search terms.
- */
 async function getInfoFromImageAI(imageBuffer) {
-    const prompt = "You are a fashion expert. Describe the clothing and accessories in this image in 5 to 7 keywords. Focus on item type, style, and color. For example: 'blue floral summer dress' or 'black leather biker jacket'. Return only the keywords.";
-    
+    const prompt = "You are a fashion expert. Describe the clothing and accessories in this image in 5 to 7 keywords. Focus on item type, style, and color. Return only the keywords.";
     try {
         const imagePart = {
             inlineData: {
@@ -36,28 +30,14 @@ async function getInfoFromImageAI(imageBuffer) {
     }
 }
 
-
-/**
- * @description Parses a text query and expands it with synonyms.
- * @param {string} userQuery - The text sentence from the user.
- * @returns {Promise<object>} - A structured object with search terms, filters, and suggestions.
- */
 async function parseAndExpandQuery(userQuery) {
-    if (!userQuery || !userQuery.trim()) {
-        return { searchTerms: '', filters: {}, suggestions: [] };
-    }
+    if (!userQuery || !userQuery.trim()) return { searchTerms: '', filters: {}, suggestions: [] };
+    
     const prompt = `
-        You are an intelligent search query parser. Your task is to convert a user's natural language query into a structured JSON object with three keys: "searchTerms", "filters", and "suggestions".
-        - "searchTerms": Keywords and synonyms for a text search (e.g., "winter jacket coat outerwear").
-        - "filters": Specific attributes like "colors", "brands", "price".
-        - "suggestions": An array of 3-4 alternative search phrases.
-
+        You are an intelligent search query parser. Convert the user's query into JSON with keys: "searchTerms", "filters", "suggestions".
         Examples:
-        - User input: "red shirt under 100" -> {"searchTerms": "red shirt top tee", "filters": {"colors": ["red"], "price": {"max": 100}}, "suggestions": ["long sleeve red tops", "red blouses", "maroon t-shirts"]}
-        - User input: "blue jeans from Denim Co." -> {"searchTerms": "blue jeans denim pants", "filters": {"colors": ["blue"], "brands": ["Denim Co."]}, "suggestions": ["light wash jeans", "Denim Co. skinny jeans", "blue trousers"]}
-
-        Now, parse the following query. Return ONLY the raw JSON object.
-
+        - "red shirt under 100" -> {"searchTerms":"red shirt","filters":{"colors":["red"],"price":{"max":100}},"suggestions":["red tee","maroon top"]}
+        - "blue jeans from Denim Co." -> {"searchTerms":"blue jeans","filters":{"colors":["blue"],"brands":["Denim Co."]},"suggestions":["light wash jeans"]}
         User input: "${userQuery}"
     `;
     try {
@@ -72,24 +52,13 @@ async function parseAndExpandQuery(userQuery) {
     }
 }
 
-
 router.post('/', upload.single('image'), async (req, res) => {
     try {
         const rawQuery = req.body.query || '';
-        
-        // --- FIX STARTS HERE ---
-        // Check if filters is a string (from FormData) before parsing.
-        // If it's an object (from a JSON request), use it directly.
         let manualFilters = {};
         if (req.body.filters) {
-            if (typeof req.body.filters === 'string') {
-                manualFilters = JSON.parse(req.body.filters);
-            } else {
-                manualFilters = req.body.filters;
-            }
+            manualFilters = typeof req.body.filters === 'string' ? JSON.parse(req.body.filters) : req.body.filters;
         }
-        // --- FIX ENDS HERE ---
-
         const { page = 1, limit = 12 } = req.body;
 
         let imageSearchTerms = '';
@@ -98,51 +67,48 @@ router.post('/', upload.single('image'), async (req, res) => {
         }
 
         const textParsed = await parseAndExpandQuery(rawQuery);
-        
+
         const combinedSearchTerms = `${imageSearchTerms} ${textParsed.searchTerms}`.trim();
         const combinedFilters = { ...textParsed.filters, ...manualFilters };
-        
+
         const dbQuery = {};
         const filterConditions = [];
 
-        if (combinedSearchTerms) {
-            dbQuery.$text = { $search: combinedSearchTerms };
+        // --- Text search ---
+        if (combinedSearchTerms) dbQuery.$text = { $search: combinedSearchTerms };
+
+        // --- Category, brand, color filters ---
+        if (combinedFilters.categories?.length) filterConditions.push({ category: { $in: combinedFilters.categories } });
+        if (combinedFilters.brands?.length) filterConditions.push({ brand: { $in: combinedFilters.brands } });
+        if (combinedFilters.colors?.length) filterConditions.push({ colors: { $in: combinedFilters.colors } });
+
+        // --- FIXED Price Filter ---
+        if (combinedFilters.price) {
+            let minPrice = null, maxPrice = null;
+
+            if (combinedFilters.price.min != null) minPrice = Number(combinedFilters.price.min);
+            if (combinedFilters.price.over != null) minPrice = Math.max(minPrice ?? 0, Number(combinedFilters.price.over));
+
+            if (combinedFilters.price.max != null) maxPrice = Number(combinedFilters.price.max);
+            if (combinedFilters.price.under != null) maxPrice = Math.min(maxPrice ?? Infinity, Number(combinedFilters.price.under));
+
+            const priceCondition = {};
+            if (minPrice != null) priceCondition.$gte = minPrice;
+            if (maxPrice != null) priceCondition.$lte = maxPrice;
+
+            if (Object.keys(priceCondition).length) filterConditions.push({ price: priceCondition });
         }
 
-        if (combinedFilters.categories && combinedFilters.categories.length > 0) {
-            filterConditions.push({ category: { $in: combinedFilters.categories } });
-        }
-        if (combinedFilters.brands && combinedFilters.brands.length > 0) {
-            filterConditions.push({ brand: { $in: combinedFilters.brands } });
-        }
-        if (combinedFilters.colors && combinedFilters.colors.length > 0) {
-            filterConditions.push({ colors: { $in: combinedFilters.colors } });
-        }
-        if (combinedFilters.price) {
-            const priceCondition = {};
-            if (combinedFilters.price.min != null) priceCondition.$gte = Number(combinedFilters.price.min);
-            if (combinedFilters.price.max != null) priceCondition.$lte = Number(combinedFilters.price.max);
-            if (Object.keys(priceCondition).length > 0) {
-                filterConditions.push({ price: priceCondition });
-            }
-        }
-        
-        if (filterConditions.length > 0) {
-            dbQuery.$and = filterConditions;
-        }
+        if (filterConditions.length) dbQuery.$and = filterConditions;
 
         const projection = combinedSearchTerms ? { score: { $meta: "textScore" } } : {};
-        
         const count = await Product.countDocuments(dbQuery);
         const productsQuery = Product.find(dbQuery, projection)
             .limit(limit)
             .skip(limit * (page - 1));
 
-        if (combinedSearchTerms) {
-            productsQuery.sort({ score: { $meta: "textScore" } });
-        } else {
-            productsQuery.sort({ createdAt: -1 });
-        }
+        if (combinedSearchTerms) productsQuery.sort({ score: { $meta: "textScore" } });
+        else productsQuery.sort({ createdAt: -1 });
 
         const products = await productsQuery;
 

@@ -1,0 +1,4002 @@
+[
+  {
+    "id": 1,
+    "name": "Men's Classic Cotton Crewneck T-Shirt",
+    "category": "Tops",
+    "sub_category": "T-Shirt",
+    "gender": "Men",
+    "brand": "Urban Threads",
+    "price": 2489.17,
+    "currency": "INR",
+    "color": "Navy Blue",
+    "material": "Cotton",
+    "available_sizes": ["S", "M", "L", "XL", "XXL"],
+    "rating": {
+      "rate": 4.6,
+      "count": 875
+    },
+    "description": "A timeless navy blue crewneck t-shirt made from 100% premium cotton. Perfect for everyday wear.",
+    "keywords": ["casual", "everyday", "cotton", "summer"],
+    "img_url": "https://picsum.photos/seed/1/400/600"
+  },
+  {
+    "id": 2,
+    "name": "Women's High-Waisted Skinny Jeans",
+    "category": "Bottoms",
+    "sub_category": "Jeans",
+    "gender": "Women",
+    "brand": "Denim Co.",
+    "price": 6608.50,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Denim",
+    "available_sizes": ["26", "28", "30", "32", "34"],
+    "rating": {
+      "rate": 4.8,
+      "count": 2150
+    },
+    "description": "Flattering high-waisted skinny jeans in a versatile black wash. Features a hint of stretch for comfort.",
+    "keywords": ["denim", "skinny fit", "high-waist", "casual"],
+    "img_url": "https://picsum.photos/seed/2/400/600"
+  },
+  {
+    "id": 3,
+    "name": "Unisex Retro Runner Sneakers",
+    "category": "Footwear",
+    "sub_category": "Sneakers",
+    "gender": "Unisex",
+    "brand": "AuraWear",
+    "price": 9960.00,
+    "currency": "INR",
+    "color": "White & Green",
+    "material": "Leather & Suede",
+    "available_sizes": ["6", "7", "8", "9", "10", "11"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1205
+    },
+    "description": "Vintage-inspired runner sneakers with a modern twist. Comfortable for all-day wear.",
+    "keywords": ["sneakers", "retro", "streetwear", "athleisure"],
+    "img_url": "https://picsum.photos/seed/3/400/600"
+  },
+  {
+    "id": 4,
+    "name": "Women's Floral Print Maxi Dress",
+    "category": "Dresses",
+    "sub_category": "Maxi Dress",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 7885.00,
+    "currency": "INR",
+    "color": "Red Floral",
+    "material": "Viscose",
+    "available_sizes": ["XS", "S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.5,
+      "count": 654
+    },
+    "description": "A beautiful and breezy maxi dress with a vibrant red floral pattern. Ideal for summer events.",
+    "keywords": ["summer", "floral", "maxi dress", "bohemian"],
+    "img_url": "https://picsum.photos/seed/4/400/600"
+  },
+  {
+    "id": 5,
+    "name": "Men's Wool Blend Peacoat",
+    "category": "Outerwear",
+    "sub_category": "Coat",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 20750.00,
+    "currency": "INR",
+    "color": "Charcoal Gray",
+    "material": "Wool Blend",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.9,
+      "count": 988
+    },
+    "description": "A sophisticated double-breasted peacoat to keep you warm and stylish during colder months.",
+    "keywords": ["winter", "formal", "coat", "wool"],
+    "img_url": "https://picsum.photos/seed/5/400/600"
+  },
+  {
+    "id": 6,
+    "name": "Women's Silk Button-Up Blouse",
+    "category": "Tops",
+    "sub_category": "Blouse",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 7304.00,
+    "currency": "INR",
+    "color": "Cream",
+    "material": "Silk",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.4,
+      "count": 421
+    },
+    "description": "An elegant and luxurious silk blouse, perfect for the office or a special occasion.",
+    "keywords": ["office wear", "elegant", "silk", "formal"],
+    "img_url": "https://picsum.photos/seed/6/400/600"
+  },
+  {
+    "id": 7,
+    "name": "Men's Slim-Fit Chino Trousers",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Men",
+    "brand": "Riverbend",
+    "price": 5395.00,
+    "currency": "INR",
+    "color": "Beige",
+    "material": "Cotton Twill",
+    "available_sizes": ["30", "32", "34", "36"],
+    "rating": {
+      "rate": 4.6,
+      "count": 1890
+    },
+    "description": "Versatile slim-fit chinos that can be dressed up or down for any occasion.",
+    "keywords": ["chinos", "slim-fit", "business casual", "smart"],
+    "img_url": "https://picsum.photos/seed/7/400/600"
+  },
+  {
+    "id": 8,
+    "name": "Leather Crossbody Handbag",
+    "category": "Accessories",
+    "sub_category": "Handbag",
+    "gender": "Women",
+    "brand": "Artisan Guild",
+    "price": 12450.00,
+    "currency": "INR",
+    "color": "Brown",
+    "material": "Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 755
+    },
+    "description": "A high-quality genuine leather crossbody bag with multiple compartments for organization.",
+    "keywords": ["leather", "handbag", "accessory", "crossbody"],
+    "img_url": "https://picsum.photos/seed/8/400/600"
+  },
+  {
+    "id": 9,
+    "name": "Unisex Graphic Print Hoodie",
+    "category": "Tops",
+    "sub_category": "Hoodie",
+    "gender": "Unisex",
+    "brand": "Streetwise",
+    "price": 6225.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Cotton/Polyester Blend",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 2500
+    },
+    "description": "Comfortable fleece-lined hoodie with a bold graphic print on the back.",
+    "keywords": ["hoodie", "streetwear", "casual", "unisex"],
+    "img_url": "https://picsum.photos/seed/9/400/600"
+  },
+  {
+    "id": 10,
+    "name": "Women's Ankle Strap Heels",
+    "category": "Footwear",
+    "sub_category": "Heels",
+    "gender": "Women",
+    "brand": "Stiletto & Co.",
+    "price": 9130.00,
+    "currency": "INR",
+    "color": "Nude",
+    "material": "Faux Suede",
+    "available_sizes": ["5", "6", "7", "8"],
+    "rating": {
+      "rate": 4.3,
+      "count": 350
+    },
+    "description": "Classic nude heels with an elegant ankle strap, perfect for formal events and parties.",
+    "keywords": ["heels", "formal wear", "party", "elegant"],
+    "img_url": "https://picsum.photos/seed/10/400/600"
+  },
+  {
+    "id": 11,
+    "name": "Men's Performance Running Shorts",
+    "category": "Activewear",
+    "sub_category": "Running Shorts",
+    "gender": "Men",
+    "brand": "Apex Athletics",
+    "price": 3735.00,
+    "currency": "INR",
+    "color": "Royal Blue",
+    "material": "Polyester",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1345
+    },
+    "description": "Lightweight and breathable running shorts with moisture-wicking technology.",
+    "keywords": ["activewear", "running", "gym", "sports"],
+    "img_url": "https://picsum.photos/seed/11/400/600"
+  },
+  {
+    "id": 12,
+    "name": "Women's Ribbed Knit Sweater",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 7469.17,
+    "currency": "INR",
+    "color": "Olive Green",
+    "material": "Knit",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 580
+    },
+    "description": "A soft and cozy ribbed knit sweater, perfect for autumn and winter layering.",
+    "keywords": ["sweater", "knitwear", "winter", "cozy"],
+    "img_url": "https://picsum.photos/seed/12/400/600"
+  },
+  {
+    "id": 13,
+    "name": "Men's Leather Bomber Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Men",
+    "brand": "Rebel Rider",
+    "price": 26560.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Leather",
+    "available_sizes": ["M", "L", "XL", "XXL"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1120
+    },
+    "description": "An iconic leather bomber jacket with a comfortable fit and timeless appeal.",
+    "keywords": ["jacket", "leather", "bomber", "cool"],
+    "img_url": "https://picsum.photos/seed/13/400/600"
+  },
+  {
+    "id": 14,
+    "name": "Women's Pleated A-Line Skirt",
+    "category": "Bottoms",
+    "sub_category": "Skirt",
+    "gender": "Women",
+    "brand": "Graceful Garbs",
+    "price": 5146.00,
+    "currency": "INR",
+    "color": "Burgundy",
+    "material": "Polyester",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.5,
+      "count": 320
+    },
+    "description": "A chic and flowy A-line skirt with elegant pleats. Falls just below the knee.",
+    "keywords": ["skirt", "pleated", "midi", "office wear"],
+    "img_url": "https://picsum.photos/seed/14/400/600"
+  },
+  {
+    "id": 15,
+    "name": "Classic Aviator Sunglasses",
+    "category": "Accessories",
+    "sub_category": "Sunglasses",
+    "gender": "Unisex",
+    "brand": "Sun Ray",
+    "price": 11205.00,
+    "currency": "INR",
+    "color": "Gold & Green",
+    "material": "Metal",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 950
+    },
+    "description": "Timeless aviator sunglasses with a gold frame and green G-15 lenses. 100% UV protection.",
+    "keywords": ["sunglasses", "aviator", "unisex", "accessory"],
+    "img_url": "https://picsum.photos/seed/15/400/600"
+  },
+  {
+    "id": 16,
+    "name": "Men's Oxford Dress Shirt",
+    "category": "Tops",
+    "sub_category": "Shirt",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 5810.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Oxford Cotton",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1400
+    },
+    "description": "A crisp white Oxford shirt, a staple for any man's formal or business casual wardrobe.",
+    "keywords": ["shirt", "formal", "office", "business"],
+    "img_url": "https://picsum.photos/seed/16/400/600"
+  },
+  {
+    "id": 17,
+    "name": "Women's Yoga Pants with Pockets",
+    "category": "Activewear",
+    "sub_category": "Yoga Pants",
+    "gender": "Women",
+    "brand": "FlexFit",
+    "price": 4565.00,
+    "currency": "INR",
+    "color": "Charcoal Gray",
+    "material": "Spandex/Nylon Blend",
+    "available_sizes": ["XS", "S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.9,
+      "count": 2800
+    },
+    "description": "High-waisted, non-see-through yoga pants with convenient side pockets for your phone.",
+    "keywords": ["yoga", "leggings", "activewear", "gym"],
+    "img_url": "https://picsum.photos/seed/17/400/600"
+  },
+  {
+    "id": 18,
+    "name": "Men's Suede Chelsea Boots",
+    "category": "Footwear",
+    "sub_category": "Boots",
+    "gender": "Men",
+    "brand": "Cobbler's Craft",
+    "price": 14940.00,
+    "currency": "INR",
+    "color": "Tan",
+    "material": "Suede",
+    "available_sizes": ["8", "9", "10", "11", "12"],
+    "rating": {
+      "rate": 4.7,
+      "count": 680
+    },
+    "description": "Stylish and versatile Chelsea boots made from genuine tan suede.",
+    "keywords": ["boots", "chelsea", "suede", "smart casual"],
+    "img_url": "https://picsum.photos/seed/18/400/600"
+  },
+  {
+    "id": 19,
+    "name": "Women's Cocktail Jumpsuit",
+    "category": "Dresses",
+    "sub_category": "Jumpsuit",
+    "gender": "Women",
+    "brand": "Evening Elegance",
+    "price": 11620.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Crepe",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 290
+    },
+    "description": "A sophisticated wide-leg jumpsuit, a modern alternative to the classic cocktail dress.",
+    "keywords": ["jumpsuit", "formal", "evening wear", "party"],
+    "img_url": "https://picsum.photos/seed/19/400/600"
+  },
+  {
+    "id": 20,
+    "name": "Reversible Leather Belt",
+    "category": "Accessories",
+    "sub_category": "Belt",
+    "gender": "Men",
+    "brand": "DuoWear",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Black/Brown",
+    "material": "Leather",
+    "available_sizes": ["32", "34", "36", "38"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1500
+    },
+    "description": "A versatile and practical belt that reverses from black to brown with a simple twist of the buckle.",
+    "keywords": ["belt", "leather", "reversible", "accessory"],
+    "img_url": "https://picsum.photos/seed/20/400/600"
+  },
+  {
+    "id": 21,
+    "name": "Women's Denim Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Women",
+    "brand": "Denim Co.",
+    "price": 7055.00,
+    "currency": "INR",
+    "color": "Light Blue Wash",
+    "material": "Denim",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1980
+    },
+    "description": "A classic light wash denim jacket, perfect for layering over dresses or t-shirts.",
+    "keywords": ["denim jacket", "casual", "layering", "spring"],
+    "img_url": "https://picsum.photos/seed/21/400/600"
+  },
+  {
+    "id": 22,
+    "name": "Men's Plaid Flannel Shirt",
+    "category": "Tops",
+    "sub_category": "Shirt",
+    "gender": "Men",
+    "brand": "Lumberjack Co.",
+    "price": 4975.85,
+    "currency": "INR",
+    "color": "Red & Black Plaid",
+    "material": "Flannel Cotton",
+    "available_sizes": ["M", "L", "XL", "XXL"],
+    "rating": {
+      "rate": 4.6,
+      "count": 2200
+    },
+    "description": "A soft and durable flannel shirt in a classic red and black plaid pattern.",
+    "keywords": ["flannel", "plaid", "casual", "autumn"],
+    "img_url": "https://picsum.photos/seed/22/400/600"
+  },
+  {
+    "id": 23,
+    "name": "Women's Strappy Summer Sandals",
+    "category": "Footwear",
+    "sub_category": "Sandals",
+    "gender": "Women",
+    "brand": "Sun Striders",
+    "price": 3735.00,
+    "currency": "INR",
+    "color": "Tan",
+    "material": "Faux Leather",
+    "available_sizes": ["5", "6", "7", "8"],
+    "rating": {
+      "rate": 4.2,
+      "count": 550
+    },
+    "description": "Minimalist strappy sandals perfect for beach days and warm summer evenings.",
+    "keywords": ["sandals", "summer", "beach", "flat"],
+    "img_url": "https://picsum.photos/seed/23/400/600"
+  },
+  {
+    "id": 24,
+    "name": "Unisex Beanie Hat",
+    "category": "Accessories",
+    "sub_category": "Hat",
+    "gender": "Unisex",
+    "brand": "Cozy Knits",
+    "price": 2075.00,
+    "currency": "INR",
+    "color": "Mustard Yellow",
+    "material": "Knit",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.5,
+      "count": 980
+    },
+    "description": "A warm and stylish ribbed knit beanie in a trendy mustard yellow color.",
+    "keywords": ["beanie", "hat", "winter", "unisex"],
+    "img_url": "https://picsum.photos/seed/24/400/600"
+  },
+  {
+    "id": 25,
+    "name": "Men's Cargo Shorts",
+    "category": "Bottoms",
+    "sub_category": "Shorts",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 4108.50,
+    "currency": "INR",
+    "color": "Olive Green",
+    "material": "Cotton Canvas",
+    "available_sizes": ["30", "32", "34", "36", "38"],
+    "rating": {
+      "rate": 4.4,
+      "count": 1250
+    },
+    "description": "Durable and practical cargo shorts with plenty of pocket space for all your essentials.",
+    "keywords": ["shorts", "cargo", "summer", "outdoor"],
+    "img_url": "https://picsum.photos/seed/25/400/600"
+  },
+  {
+    "id": 26,
+    "name": "Women's Sports Bra",
+    "category": "Activewear",
+    "sub_category": "Sports Bra",
+    "gender": "Women",
+    "brand": "FlexFit",
+    "price": 3154.00,
+    "currency": "INR",
+    "color": "Pink",
+    "material": "Nylon/Spandex",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 880
+    },
+    "description": "A medium-support sports bra designed for comfort and performance during workouts.",
+    "keywords": ["sports bra", "activewear", "gym", "support"],
+    "img_url": "https://picsum.photos/seed/26/400/600"
+  },
+  {
+    "id": 27,
+    "name": "Men's V-Neck Sweater",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 7055.00,
+    "currency": "INR",
+    "color": "Burgundy",
+    "material": "Merino Wool",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.6,
+      "count": 720
+    },
+    "description": "A lightweight and soft V-neck sweater made from 100% merino wool.",
+    "keywords": ["sweater", "merino wool", "v-neck", "smart casual"],
+    "img_url": "https://picsum.photos/seed/27/400/600"
+  },
+  {
+    "id": 28,
+    "name": "Women's Wrap Mini Dress",
+    "category": "Dresses",
+    "sub_category": "Mini Dress",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 6474.00,
+    "currency": "INR",
+    "color": "Teal",
+    "material": "Satin",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.4,
+      "count": 410
+    },
+    "description": "A playful and flirty wrap-style mini dress in a stunning teal satin fabric.",
+    "keywords": ["mini dress", "wrap dress", "party", "satin"],
+    "img_url": "https://picsum.photos/seed/28/400/600"
+  },
+  {
+    "id": 29,
+    "name": "Men's Leather Loafers",
+    "category": "Footwear",
+    "sub_category": "Loafers",
+    "gender": "Men",
+    "brand": "Cobbler's Craft",
+    "price": 13695.00,
+    "currency": "INR",
+    "color": "Dark Brown",
+    "material": "Leather",
+    "available_sizes": ["7", "8", "9", "10", "11"],
+    "rating": {
+      "rate": 4.8,
+      "count": 940
+    },
+    "description": "Classic penny loafers crafted from rich, dark brown leather. A timeless footwear choice.",
+    "keywords": ["loafers", "leather", "formal", "smart casual"],
+    "img_url": "https://picsum.photos/seed/29/400/600"
+  },
+  {
+    "id": 30,
+    "name": "Lightweight Cashmere Scarf",
+    "category": "Accessories",
+    "sub_category": "Scarf",
+    "gender": "Unisex",
+    "brand": "EchoStyle",
+    "price": 9545.00,
+    "currency": "INR",
+    "color": "Light Gray",
+    "material": "Cashmere",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 600
+    },
+    "description": "An incredibly soft and luxurious cashmere scarf, perfect for adding a touch of elegance and warmth.",
+    "keywords": ["scarf", "cashmere", "luxury", "unisex"],
+    "img_url": "https://picsum.photos/seed/30/400/600"
+  },
+  {
+    "id": 31,
+    "name": "Women's Puffer Vest",
+    "category": "Outerwear",
+    "sub_category": "Vest",
+    "gender": "Women",
+    "brand": "Apex Athletics",
+    "price": 7470.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Nylon",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.5,
+      "count": 480
+    },
+    "description": "A lightweight yet warm puffer vest, ideal for layering during transitional weather.",
+    "keywords": ["vest", "puffer", "layering", "autumn"],
+    "img_url": "https://picsum.photos/seed/31/400/600"
+  },
+  {
+    "id": 32,
+    "name": "Men's Straight-Fit Jeans",
+    "category": "Bottoms",
+    "sub_category": "Jeans",
+    "gender": "Men",
+    "brand": "Denim Co.",
+    "price": 6225.00,
+    "currency": "INR",
+    "color": "Medium Blue Wash",
+    "material": "Denim",
+    "available_sizes": ["30", "32", "34", "36", "38"],
+    "rating": {
+      "rate": 4.6,
+      "count": 2100
+    },
+    "description": "Classic straight-fit jeans in a versatile medium blue wash. Built for comfort and durability.",
+    "keywords": ["jeans", "denim", "straight-fit", "casual"],
+    "img_url": "https://picsum.photos/seed/32/400/600"
+  },
+  {
+    "id": 33,
+    "name": "Women's Ruffled Sleeve Blouse",
+    "category": "Tops",
+    "sub_category": "Blouse",
+    "gender": "Women",
+    "brand": "Graceful Garbs",
+    "price": 4565.00,
+    "currency": "INR",
+    "color": "Pastel Pink",
+    "material": "Chiffon",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.3,
+      "count": 250
+    },
+    "description": "A feminine blouse with delicate ruffled sleeves, adding a touch of romance to any outfit.",
+    "keywords": ["blouse", "ruffles", "feminine", "work wear"],
+    "img_url": "https://picsum.photos/seed/33/400/600"
+  },
+  {
+    "id": 34,
+    "name": "Men's Canvas High-Top Sneakers",
+    "category": "Footwear",
+    "sub_category": "Sneakers",
+    "gender": "Men",
+    "brand": "Streetwise",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Canvas",
+    "available_sizes": ["8", "9", "10", "11", "12"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1800
+    },
+    "description": "Iconic high-top sneakers in durable black canvas. A streetwear staple.",
+    "keywords": ["sneakers", "high-top", "canvas", "streetwear"],
+    "img_url": "https://picsum.photos/seed/34/400/600"
+  },
+  {
+    "id": 35,
+    "name": "Women's Wide-Leg Linen Trousers",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Women",
+    "brand": "Riverbend",
+    "price": 5976.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Linen",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.6,
+      "count": 520
+    },
+    "description": "Breezy and elegant wide-leg trousers made from 100% linen, perfect for warm weather.",
+    "keywords": ["linen", "trousers", "wide-leg", "summer"],
+    "img_url": "https://picsum.photos/seed/35/400/600"
+  },
+  {
+    "id": 36,
+    "name": "Men's Henley Long-Sleeve Shirt",
+    "category": "Tops",
+    "sub_category": "T-Shirt",
+    "gender": "Men",
+    "brand": "Urban Threads",
+    "price": 3527.50,
+    "currency": "INR",
+    "color": "Charcoal Gray",
+    "material": "Cotton Waffle-Knit",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.5,
+      "count": 1150
+    },
+    "description": "A comfortable and stylish long-sleeve henley shirt in a textured waffle-knit.",
+    "keywords": ["henley", "long-sleeve", "casual", "layering"],
+    "img_url": "https://picsum.photos/seed/36/400/600"
+  },
+  {
+    "id": 37,
+    "name": "Women's Trench Coat",
+    "category": "Outerwear",
+    "sub_category": "Coat",
+    "gender": "Women",
+    "brand": "Zenith",
+    "price": 16185.00,
+    "currency": "INR",
+    "color": "Beige",
+    "material": "Cotton Gabardine",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 850
+    },
+    "description": "A timeless double-breasted trench coat. The perfect outerwear piece for spring and autumn.",
+    "keywords": ["trench coat", "classic", "outerwear", "spring"],
+    "img_url": "https://picsum.photos/seed/37/400/600"
+  },
+  {
+    "id": 38,
+    "name": "Canvas Tote Bag",
+    "category": "Accessories",
+    "sub_category": "Handbag",
+    "gender": "Unisex",
+    "brand": "Everyday Essentials",
+    "price": 2905.00,
+    "currency": "INR",
+    "color": "Natural",
+    "material": "Canvas",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 2200
+    },
+    "description": "A spacious and durable canvas tote bag, ideal for shopping, work, or the beach.",
+    "keywords": ["tote bag", "canvas", "unisex", "shopping"],
+    "img_url": "https://picsum.photos/seed/38/400/600"
+  },
+  {
+    "id": 39,
+    "name": "Women's Lace-Trim Cami Top",
+    "category": "Tops",
+    "sub_category": "Tank Top",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 3237.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Silk Blend",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.2,
+      "count": 380
+    },
+    "description": "A delicate camisole top with elegant lace trim. Perfect for layering or wearing on its own.",
+    "keywords": ["camisole", "lace", "layering", "evening"],
+    "img_url": "https://picsum.photos/seed/39/400/600"
+  },
+  {
+    "id": 40,
+    "name": "Men's Waterproof Track Jacket",
+    "category": "Activewear",
+    "sub_category": "Track Jacket",
+    "gender": "Men",
+    "brand": "Apex Athletics",
+    "price": 9130.00,
+    "currency": "INR",
+    "color": "Red",
+    "material": "Nylon",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 990
+    },
+    "description": "A waterproof and wind-resistant track jacket for all-weather training.",
+    "keywords": ["jacket", "waterproof", "activewear", "running"],
+    "img_url": "https://picsum.photos/seed/40/400/600"
+  },
+  {
+    "id": 41,
+    "name": "Women's Chunky Knit Cardigan",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 7926.50,
+    "currency": "INR",
+    "color": "Cream",
+    "material": "Wool Blend",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 650
+    },
+    "description": "An oversized chunky knit cardigan that feels like a warm hug. Perfect for cozy days in.",
+    "keywords": ["cardigan", "chunky knit", "cozy", "winter"],
+    "img_url": "https://picsum.photos/seed/41/400/600"
+  },
+  {
+    "id": 42,
+    "name": "Men's Polo Shirt",
+    "category": "Tops",
+    "sub_category": "T-Shirt",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 4565.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Pique Cotton",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.6,
+      "count": 1750
+    },
+    "description": "A classic polo shirt made from breathable pique cotton. A smart-casual essential.",
+    "keywords": ["polo", "smart casual", "summer", "golf"],
+    "img_url": "https://picsum.photos/seed/42/400/600"
+  },
+  {
+    "id": 43,
+    "name": "Women's Leather Combat Boots",
+    "category": "Footwear",
+    "sub_category": "Boots",
+    "gender": "Women",
+    "brand": "Rebel Rider",
+    "price": 15770.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Leather",
+    "available_sizes": ["6", "7", "8", "9"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1100
+    },
+    "description": "Durable and stylish combat boots with a side-zip for easy wear.",
+    "keywords": ["boots", "combat boots", "leather", "edgy"],
+    "img_url": "https://picsum.photos/seed/43/400/600"
+  },
+  {
+    "id": 44,
+    "name": "Men's Single-Breasted Blazer",
+    "category": "Outerwear",
+    "sub_category": "Blazer",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 14940.00,
+    "currency": "INR",
+    "color": "Navy Blue",
+    "material": "Wool Blend",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 550
+    },
+    "description": "A sharply tailored navy blazer that works for both office and evening events.",
+    "keywords": ["blazer", "formal", "business", "smart"],
+    "img_url": "https://picsum.photos/seed/44/400/600"
+  },
+  {
+    "id": 45,
+    "name": "Women's Bodycon Midi Dress",
+    "category": "Dresses",
+    "sub_category": "Midi Dress",
+    "gender": "Women",
+    "brand": "Evening Elegance",
+    "price": 7387.00,
+    "currency": "INR",
+    "color": "Red",
+    "material": "Scuba",
+    "available_sizes": ["XS", "S", "M"],
+    "rating": {
+      "rate": 4.5,
+      "count": 400
+    },
+    "description": "A stunning figure-hugging midi dress in a bold red color, perfect for making a statement.",
+    "keywords": ["bodycon", "midi dress", "party", "cocktail"],
+    "img_url": "https://picsum.photos/seed/45/400/600"
+  },
+  {
+    "id": 46,
+    "name": "Unisex Baseball Cap",
+    "category": "Accessories",
+    "sub_category": "Hat",
+    "gender": "Unisex",
+    "brand": "Streetwise",
+    "price": 2324.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Cotton",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.6,
+      "count": 1300
+    },
+    "description": "A classic six-panel baseball cap with an adjustable strap for a perfect fit.",
+    "keywords": ["hat", "cap", "casual", "streetwear"],
+    "img_url": "https://picsum.photos/seed/46/400/600"
+  },
+  {
+    "id": 47,
+    "name": "Women's High-Rise Denim Shorts",
+    "category": "Bottoms",
+    "sub_category": "Shorts",
+    "gender": "Women",
+    "brand": "Denim Co.",
+    "price": 4316.00,
+    "currency": "INR",
+    "color": "Blue",
+    "material": "Denim",
+    "available_sizes": ["26", "28", "30", "32"],
+    "rating": {
+      "rate": 4.4,
+      "count": 800
+    },
+    "description": "Vintage-inspired high-rise denim shorts with a raw hem.",
+    "keywords": ["shorts", "denim", "high-rise", "summer"],
+    "img_url": "https://picsum.photos/seed/47/400/600"
+  },
+  {
+    "id": 48,
+    "name": "Men's Quilted Vest",
+    "category": "Outerwear",
+    "sub_category": "Vest",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 7055.00,
+    "currency": "INR",
+    "color": "Olive Green",
+    "material": "Nylon",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 920
+    },
+    "description": "A lightweight quilted vest perfect for layering on chilly days.",
+    "keywords": ["vest", "quilted", "layering", "outdoor"],
+    "img_url": "https://picsum.photos/seed/48/400/600"
+  },
+  {
+    "id": 49,
+    "name": "Women's Platform Sneakers",
+    "category": "Footwear",
+    "sub_category": "Sneakers",
+    "gender": "Women",
+    "brand": "AuraWear",
+    "price": 9130.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Leather",
+    "available_sizes": ["6", "7", "8"],
+    "rating": {
+      "rate": 4.5,
+      "count": 1050
+    },
+    "description": "Classic white leather sneakers with a modern platform sole for extra height and style.",
+    "keywords": ["sneakers", "platform", "leather", "casual"],
+    "img_url": "https://picsum.photos/seed/49/400/600"
+  },
+  {
+    "id": 50,
+    "name": "Men's Crewneck Cashmere Sweater",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Men",
+    "brand": "EchoStyle",
+    "price": 16599.17,
+    "currency": "INR",
+    "color": "Charcoal Gray",
+    "material": "Cashmere",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.9,
+      "count": 880
+    },
+    "description": "An exceptionally soft and luxurious 100% cashmere sweater.",
+    "keywords": ["cashmere", "sweater", "luxury", "winter"],
+    "img_url": "https://picsum.photos/seed/50/400/600"
+  },
+  {
+    "id": 51,
+    "name": "Women's Long-Sleeve Bodysuit",
+    "category": "Tops",
+    "sub_category": "Bodysuit",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Cotton/Spandex",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 710
+    },
+    "description": "A sleek and versatile long-sleeve bodysuit, perfect for layering.",
+    "keywords": ["bodysuit", "layering", "sleek", "essential"],
+    "img_url": "https://picsum.photos/seed/51/400/600"
+  },
+  {
+    "id": 52,
+    "name": "Men's Leather Dress Boots",
+    "category": "Footwear",
+    "sub_category": "Boots",
+    "gender": "Men",
+    "brand": "Cobbler's Craft",
+    "price": 18260.00,
+    "currency": "INR",
+    "color": "Dark Brown",
+    "material": "Leather",
+    "available_sizes": ["8", "9", "10", "11"],
+    "rating": {
+      "rate": 4.8,
+      "count": 620
+    },
+    "description": "Elegant leather dress boots with brogue detailing, perfect for formal occasions.",
+    "keywords": ["boots", "dress boots", "leather", "formal"],
+    "img_url": "https://picsum.photos/seed/52/400/600"
+  },
+  {
+    "id": 53,
+    "name": "Women's Tailored Gray Blazer",
+    "category": "Outerwear",
+    "sub_category": "Blazer",
+    "gender": "Women",
+    "brand": "Prestige Wear",
+    "price": 12450.00,
+    "currency": "INR",
+    "color": "Light Gray",
+    "material": "Polyester/Viscose Blend",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 450
+    },
+    "description": "A sharp, tailored blazer in a versatile light gray, ideal for office wear.",
+    "keywords": ["blazer", "tailored", "office", "business casual"],
+    "img_url": "https://picsum.photos/seed/53/400/600"
+  },
+  {
+    "id": 54,
+    "name": "Men's Tropical Print Swim Trunks",
+    "category": "Activewear",
+    "sub_category": "Swimwear",
+    "gender": "Men",
+    "brand": "Sun Striders",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Blue/Green Tropical",
+    "material": "Polyester",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.5,
+      "count": 780
+    },
+    "description": "Bright and fun swim trunks with a quick-dry fabric and comfortable mesh lining.",
+    "keywords": ["swimwear", "beach", "summer", "trunks"],
+    "img_url": "https://picsum.photos/seed/54/400/600"
+  },
+  {
+    "id": 55,
+    "name": "Women's Velvet Evening Dress",
+    "category": "Dresses",
+    "sub_category": "Evening Dress",
+    "gender": "Women",
+    "brand": "Evening Elegance",
+    "price": 14940.00,
+    "currency": "INR",
+    "color": "Emerald Green",
+    "material": "Velvet",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 280
+    },
+    "description": "A luxurious and elegant velvet evening dress with a timeless silhouette.",
+    "keywords": ["velvet", "evening dress", "formal", "luxury"],
+    "img_url": "https://picsum.photos/seed/55/400/600"
+  },
+  {
+    "id": 56,
+    "name": "Men's Minimalist Digital Watch",
+    "category": "Accessories",
+    "sub_category": "Watch",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 10375.00,
+    "currency": "INR",
+    "color": "Silver",
+    "material": "Stainless Steel",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.6,
+      "count": 1100
+    },
+    "description": "A sleek and modern digital watch with a minimalist design and stainless steel strap.",
+    "keywords": ["watch", "digital", "minimalist", "accessory"],
+    "img_url": "https://picsum.photos/seed/56/400/600"
+  },
+  {
+    "id": 57,
+    "name": "Women's Oversized Linen Shirt",
+    "category": "Tops",
+    "sub_category": "Shirt",
+    "gender": "Women",
+    "brand": "Riverbend",
+    "price": 6225.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Linen",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 950
+    },
+    "description": "A breezy, oversized linen shirt perfect as a casual top or a beach cover-up.",
+    "keywords": ["linen shirt", "oversized", "beachwear", "casual"],
+    "img_url": "https://picsum.photos/seed/57/400/600"
+  },
+  {
+    "id": 58,
+    "name": "Men's Athletic Jogger Pants",
+    "category": "Activewear",
+    "sub_category": "Joggers",
+    "gender": "Men",
+    "brand": "Apex Athletics",
+    "price": 5395.00,
+    "currency": "INR",
+    "color": "Gray",
+    "material": "Fleece",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1450
+    },
+    "description": "Comfortable and stylish jogger pants perfect for the gym or lounging.",
+    "keywords": ["joggers", "activewear", "athleisure", "gym"],
+    "img_url": "https://picsum.photos/seed/58/400/600"
+  },
+  {
+    "id": 59,
+    "name": "Women's Yellow Off-Shoulder Top",
+    "category": "Tops",
+    "sub_category": "Blouse",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Yellow",
+    "material": "Cotton",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.4,
+      "count": 390
+    },
+    "description": "A bright and cheerful off-the-shoulder top, perfect for sunny days.",
+    "keywords": ["off-shoulder", "summer", "blouse", "casual"],
+    "img_url": "https://picsum.photos/seed/59/400/600"
+  },
+  {
+    "id": 60,
+    "name": "Silk Paisley Pocket Square",
+    "category": "Accessories",
+    "sub_category": "Pocket Square",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 2905.00,
+    "currency": "INR",
+    "color": "Blue/Gold Paisley",
+    "material": "Silk",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 210
+    },
+    "description": "An elegant silk pocket square with a classic paisley pattern to elevate any suit.",
+    "keywords": ["pocket square", "silk", "formal", "accessory"],
+    "img_url": "https://picsum.photos/seed/60/400/600"
+  },
+  {
+    "id": 61,
+    "name": "Women's High-Support Sports Bra",
+    "category": "Activewear",
+    "sub_category": "Sports Bra",
+    "gender": "Women",
+    "brand": "FlexFit",
+    "price": 3735.00,
+    "currency": "INR",
+    "color": "Black & White",
+    "material": "Nylon/Spandex",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1020
+    },
+    "description": "A high-support sports bra designed for high-impact activities.",
+    "keywords": ["sports bra", "high-impact", "activewear", "gym"],
+    "img_url": "https://picsum.photos/seed/61/400/600"
+  },
+  {
+    "id": 62,
+    "name": "Men's Dark-Wash Denim Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Men",
+    "brand": "Denim Co.",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "Dark Blue",
+    "material": "Denim",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1850
+    },
+    "description": "A timeless dark-wash denim jacket, a staple for any casual wardrobe.",
+    "keywords": ["denim jacket", "casual", "outerwear", "classic"],
+    "img_url": "https://picsum.photos/seed/62/400/600"
+  },
+  {
+    "id": 63,
+    "name": "Women's Lace-Up Espadrille Sandals",
+    "category": "Footwear",
+    "sub_category": "Sandals",
+    "gender": "Women",
+    "brand": "Sun Striders",
+    "price": 5810.00,
+    "currency": "INR",
+    "color": "Beige",
+    "material": "Canvas/Jute",
+    "available_sizes": ["6", "7", "8"],
+    "rating": {
+      "rate": 4.5,
+      "count": 480
+    },
+    "description": "Chic espadrille sandals with ankle ties, perfect for summer dresses.",
+    "keywords": ["espadrilles", "sandals", "summer", "casual"],
+    "img_url": "https://picsum.photos/seed/63/400/600"
+  },
+  {
+    "id": 64,
+    "name": "Men's Cashmere Turtleneck Sweater",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Men",
+    "brand": "EchoStyle",
+    "price": 18675.00,
+    "currency": "INR",
+    "color": "Gray",
+    "material": "Cashmere",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.9,
+      "count": 750
+    },
+    "description": "A luxurious and soft gray cashmere turtleneck for ultimate warmth and style.",
+    "keywords": ["turtleneck", "cashmere", "sweater", "luxury"],
+    "img_url": "https://picsum.photos/seed/64/400/600"
+  },
+  {
+    "id": 65,
+    "name": "Women's Polka Dot Mini Skirt",
+    "category": "Bottoms",
+    "sub_category": "Skirt",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 4565.00,
+    "currency": "INR",
+    "color": "Black/White",
+    "material": "Polyester",
+    "available_sizes": ["XS", "S", "M"],
+    "rating": {
+      "rate": 4.3,
+      "count": 310
+    },
+    "description": "A fun and flirty polka dot mini skirt with a playful silhouette.",
+    "keywords": ["mini skirt", "polka dot", "casual", "fun"],
+    "img_url": "https://picsum.photos/seed/65/400/600"
+  },
+  {
+    "id": 66,
+    "name": "Men's Leather Laptop Bag",
+    "category": "Accessories",
+    "sub_category": "Bag",
+    "gender": "Men",
+    "brand": "Artisan Guild",
+    "price": 16500.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 550
+    },
+    "description": "A sophisticated black leather bag with a padded compartment for a laptop.",
+    "keywords": ["laptop bag", "leather", "business", "accessory"],
+    "img_url": "https://picsum.photos/seed/66/400/600"
+  },
+  {
+    "id": 67,
+    "name": "Women's Striped Breton Top",
+    "category": "Tops",
+    "sub_category": "T-Shirt",
+    "gender": "Women",
+    "brand": "Urban Threads",
+    "price": 3735.00,
+    "currency": "INR",
+    "color": "White/Navy Stripe",
+    "material": "Cotton",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1600
+    },
+    "description": "A classic long-sleeve Breton top with timeless navy and white stripes.",
+    "keywords": ["breton", "striped top", "casual", "classic"],
+    "img_url": "https://picsum.photos/seed/67/400/600"
+  },
+  {
+    "id": 68,
+    "name": "Men's Linen Drawstring Shorts",
+    "category": "Bottoms",
+    "sub_category": "Shorts",
+    "gender": "Men",
+    "brand": "Riverbend",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Beige",
+    "material": "Linen",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.5,
+      "count": 900
+    },
+    "description": "Lightweight and breathable linen shorts with a comfortable drawstring waist.",
+    "keywords": ["linen shorts", "summer", "casual", "beach"],
+    "img_url": "https://picsum.photos/seed/68/400/600"
+  },
+  {
+    "id": 69,
+    "name": "Women's Satin Cowl Neck Top",
+    "category": "Tops",
+    "sub_category": "Blouse",
+    "gender": "Women",
+    "brand": "Evening Elegance",
+    "price": 5395.00,
+    "currency": "INR",
+    "color": "Champagne",
+    "material": "Satin",
+    "available_sizes": ["XS", "S", "M"],
+    "rating": {
+      "rate": 4.6,
+      "count": 330
+    },
+    "description": "An elegant sleeveless satin top with a flattering cowl neckline.",
+    "keywords": ["satin top", "cowl neck", "evening wear", "elegant"],
+    "img_url": "https://picsum.photos/seed/69/400/600"
+  },
+  {
+    "id": 70,
+    "name": "Men's Leather Driving Gloves",
+    "category": "Accessories",
+    "sub_category": "Gloves",
+    "gender": "Men",
+    "brand": "Rebel Rider",
+    "price": 6225.00,
+    "currency": "INR",
+    "color": "Dark Brown",
+    "material": "Leather",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 150
+    },
+    "description": "Classic dark brown leather driving gloves with knuckle holes and a snap closure.",
+    "keywords": ["driving gloves", "leather", "accessory", "classic"],
+    "img_url": "https://picsum.photos/seed/70/400/600"
+  },
+  {
+    "id": 71,
+    "name": "Women's Simple Cotton Tank Top",
+    "category": "Tops",
+    "sub_category": "Tank Top",
+    "gender": "Women",
+    "brand": "Everyday Essentials",
+    "price": 1660.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Cotton",
+    "available_sizes": ["XS", "S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.5,
+      "count": 2500
+    },
+    "description": "A basic but essential white cotton tank top for layering or wearing alone.",
+    "keywords": ["tank top", "basic", "cotton", "essential"],
+    "img_url": "https://picsum.photos/seed/71/400/600"
+  },
+  {
+    "id": 72,
+    "name": "Men's Wool Trousers",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 9960.00,
+    "currency": "INR",
+    "color": "Charcoal Gray",
+    "material": "Wool",
+    "available_sizes": ["32", "34", "36", "38"],
+    "rating": {
+      "rate": 4.7,
+      "count": 800
+    },
+    "description": " impeccably tailored charcoal gray wool trousers for formal and business wear.",
+    "keywords": ["trousers", "wool", "formal", "business"],
+    "img_url": "https://picsum.photos/seed/72/400/600"
+  },
+  {
+    "id": 73,
+    "name": "Women's One-Shoulder Cocktail Dress",
+    "category": "Dresses",
+    "sub_category": "Cocktail Dress",
+    "gender": "Women",
+    "brand": "Evening Elegance",
+    "price": 10790.00,
+    "currency": "INR",
+    "color": "Navy Blue",
+    "material": "Polyester",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 220
+    },
+    "description": "A chic and modern one-shoulder cocktail dress, perfect for special events.",
+    "keywords": ["cocktail dress", "one-shoulder", "party", "formal"],
+    "img_url": "https://picsum.photos/seed/73/400/600"
+  },
+  {
+    "id": 74,
+    "name": "High-Performance Running Sneakers",
+    "category": "Footwear",
+    "sub_category": "Sneakers",
+    "gender": "Unisex",
+    "brand": "Apex Athletics",
+    "price": 12450.00,
+    "currency": "INR",
+    "color": "Black/Red",
+    "material": "Mesh/Synthetic",
+    "available_sizes": ["7", "8", "9", "10", "11"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1900
+    },
+    "description": "Lightweight running sneakers with advanced sole technology for maximum performance.",
+    "keywords": ["sneakers", "running", "performance", "athleisure"],
+    "img_url": "https://picsum.photos/seed/74/400/600"
+  },
+  {
+    "id": 75,
+    "name": "Women's Oversized Fleece Pullover",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "Cream",
+    "material": "Fleece",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 850
+    },
+    "description": "An incredibly soft and cozy oversized fleece pullover for ultimate comfort.",
+    "keywords": ["fleece", "pullover", "cozy", "loungewear"],
+    "img_url": "https://picsum.photos/seed/75/400/600"
+  },
+  {
+    "id": 76,
+    "name": "Men's Classic Trench Coat",
+    "category": "Outerwear",
+    "sub_category": "Coat",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 20750.00,
+    "currency": "INR",
+    "color": "Khaki",
+    "material": "Cotton Gabardine",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 910
+    },
+    "description": "A classic khaki trench coat, a timeless piece of outerwear for any wardrobe.",
+    "keywords": ["trench coat", "classic", "outerwear", "smart"],
+    "img_url": "https://picsum.photos/seed/76/400/600"
+  },
+  {
+    "id": 77,
+    "name": "Women's Floral Sundress",
+    "category": "Dresses",
+    "sub_category": "Sundress",
+    "gender": "Women",
+    "brand": "Sun Striders",
+    "price": 5810.00,
+    "currency": "INR",
+    "color": "Yellow Floral",
+    "material": "Cotton",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.5,
+      "count": 640
+    },
+    "description": "A light and airy floral sundress with a flattering A-line cut.",
+    "keywords": ["sundress", "floral", "summer", "casual"],
+    "img_url": "https://picsum.photos/seed/77/400/600"
+  },
+  {
+    "id": 78,
+    "name": "Men's Leather Boat Shoes",
+    "category": "Footwear",
+    "sub_category": "Loafers",
+    "gender": "Men",
+    "brand": "Cobbler's Craft",
+    "price": 10375.00,
+    "currency": "INR",
+    "color": "Navy/Brown",
+    "material": "Leather",
+    "available_sizes": ["8", "9", "10", "11"],
+    "rating": {
+      "rate": 4.7,
+      "count": 780
+    },
+    "description": "Classic leather boat shoes with a non-slip sole, perfect for smart-casual wear.",
+    "keywords": ["boat shoes", "leather", "smart casual", "summer"],
+    "img_url": "https://picsum.photos/seed/78/400/600"
+  },
+  {
+    "id": 79,
+    "name": "Women's Faux Leather Leggings",
+    "category": "Bottoms",
+    "sub_category": "Leggings",
+    "gender": "Women",
+    "brand": "Rebel Rider",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Faux Leather",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 930
+    },
+    "description": "Chic and edgy high-waisted leggings with a faux leather finish.",
+    "keywords": ["faux leather", "leggings", "edgy", "party"],
+    "img_url": "https://picsum.photos/seed/79/400/600"
+  },
+  {
+    "id": 80,
+    "name": "Men's Silk Tie",
+    "category": "Accessories",
+    "sub_category": "Tie",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Red Geometric",
+    "material": "Silk",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 250
+    },
+    "description": "A luxurious 100% silk tie with a subtle geometric pattern in red.",
+    "keywords": ["tie", "silk", "formal", "business"],
+    "img_url": "https://picsum.photos/seed/80/400/600"
+  },
+  {
+    "id": 81,
+    "name": "Women's Cashmere Blend Cardigan",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 9130.00,
+    "currency": "INR",
+    "color": "Dusty Rose",
+    "material": "Cashmere Blend",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 480
+    },
+    "description": "A soft and feminine cardigan in a beautiful dusty rose color.",
+    "keywords": ["cardigan", "cashmere", "soft", "elegant"],
+    "img_url": "https://picsum.photos/seed/81/400/600"
+  },
+  {
+    "id": 82,
+    "name": "Men's Utility Vest",
+    "category": "Outerwear",
+    "sub_category": "Vest",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "Olive Green",
+    "material": "Cotton Canvas",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.6,
+      "count": 680
+    },
+    "description": "A rugged and practical utility vest with multiple pockets, perfect for outdoors.",
+    "keywords": ["vest", "utility", "outdoor", "functional"],
+    "img_url": "https://picsum.photos/seed/82/400/600"
+  },
+  {
+    "id": 83,
+    "name": "Women's Pointed-Toe Ballet Flats",
+    "category": "Footwear",
+    "sub_category": "Flats",
+    "gender": "Women",
+    "brand": "Stiletto & Co.",
+    "price": 5810.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Leather",
+    "available_sizes": ["6", "7", "8", "9"],
+    "rating": {
+      "rate": 4.5,
+      "count": 710
+    },
+    "description": "Chic and comfortable pointed-toe ballet flats in classic black leather.",
+    "keywords": ["ballet flats", "pointed-toe", "leather", "work wear"],
+    "img_url": "https://picsum.photos/seed/83/400/600"
+  },
+  {
+    "id": 84,
+    "name": "Men's Harrington Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Men",
+    "brand": "Urban Threads",
+    "price": 9960.00,
+    "currency": "INR",
+    "color": "Beige",
+    "material": "Cotton",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1150
+    },
+    "description": "A classic beige Harrington jacket with a plaid lining, a timeless casual piece.",
+    "keywords": ["harrington jacket", "classic", "casual", "outerwear"],
+    "img_url": "https://picsum.photos/seed/84/400/600"
+  },
+  {
+    "id": 85,
+    "name": "Women's Gingham Print Midi Skirt",
+    "category": "Bottoms",
+    "sub_category": "Skirt",
+    "gender": "Women",
+    "brand": "Graceful Garbs",
+    "price": 5395.00,
+    "currency": "INR",
+    "color": "Black/White Gingham",
+    "material": "Cotton",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.4,
+      "count": 340
+    },
+    "description": "A bright and cheerful midi skirt with a classic black and white gingham print.",
+    "keywords": ["gingham", "midi skirt", "summer", "retro"],
+    "img_url": "https://picsum.photos/seed/85/400/600"
+  },
+  {
+    "id": 86,
+    "name": "Minimalist Silver Necklace",
+    "category": "Accessories",
+    "sub_category": "Necklace",
+    "gender": "Unisex",
+    "brand": "EchoStyle",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Silver",
+    "material": "Sterling Silver",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 880
+    },
+    "description": "A delicate and minimalist sterling silver necklace with a small pendant.",
+    "keywords": ["necklace", "silver", "minimalist", "accessory"],
+    "img_url": "https://picsum.photos/seed/86/400/600"
+  },
+  {
+    "id": 87,
+    "name": "Men's Performance Polo Shirt",
+    "category": "Activewear",
+    "sub_category": "Polo",
+    "gender": "Men",
+    "brand": "Apex Athletics",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Royal Blue",
+    "material": "Polyester",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 990
+    },
+    "description": "A performance polo shirt with moisture-wicking fabric, ideal for sports like golf or tennis.",
+    "keywords": ["polo", "performance", "activewear", "sports"],
+    "img_url": "https://picsum.photos/seed/87/400/600"
+  },
+  {
+    "id": 88,
+    "name": "Women's Plaid Blanket Scarf",
+    "category": "Accessories",
+    "sub_category": "Scarf",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 3320.00,
+    "currency": "INR",
+    "color": "Red/Green Plaid",
+    "material": "Acrylic",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.6,
+      "count": 1200
+    },
+    "description": "A large, soft, and cozy blanket scarf in a classic autumnal plaid pattern.",
+    "keywords": ["blanket scarf", "plaid", "winter", "cozy"],
+    "img_url": "https://picsum.photos/seed/88/400/600"
+  },
+  {
+    "id": 89,
+    "name": "Men's Classic White Leather Sneakers",
+    "category": "Footwear",
+    "sub_category": "Sneakers",
+    "gender": "Men",
+    "brand": "AuraWear",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Leather",
+    "available_sizes": ["8", "9", "10", "11", "12"],
+    "rating": {
+      "rate": 4.8,
+      "count": 2300
+    },
+    "description": "Timeless and versatile classic court sneakers in crisp white leather.",
+    "keywords": ["sneakers", "classic", "leather", "minimalist"],
+    "img_url": "https://picsum.photos/seed/89/400/600"
+  },
+  {
+    "id": 90,
+    "name": "Women's Satin Slip Dress",
+    "category": "Dresses",
+    "sub_category": "Slip Dress",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 7470.00,
+    "currency": "INR",
+    "color": "Silver-Gray",
+    "material": "Satin",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.5,
+      "count": 410
+    },
+    "description": "An elegant and minimalist satin slip dress that drapes beautifully.",
+    "keywords": ["slip dress", "satin", "elegant", "minimalist"],
+    "img_url": "https://picsum.photos/seed/90/400/600"
+  },
+  {
+    "id": 91,
+    "name": "Men's Tailored Suit Jacket",
+    "category": "Outerwear",
+    "sub_category": "Blazer",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 16500.00,
+    "currency": "INR",
+    "color": "Navy Blue",
+    "material": "Wool Blend",
+    "available_sizes": ["38R", "40R", "42R", "44R"],
+    "rating": {
+      "rate": 4.9,
+      "count": 600
+    },
+    "description": "An impeccably tailored navy blue suit jacket for formal and business occasions.",
+    "keywords": ["suit jacket", "blazer", "formal", "business"],
+    "img_url": "https://picsum.photos/seed/91/400/600"
+  },
+  {
+    "id": 92,
+    "name": "Women's High-Waisted Bikini Set",
+    "category": "Activewear",
+    "sub_category": "Swimwear",
+    "gender": "Women",
+    "brand": "Sun Striders",
+    "price": 6225.00,
+    "currency": "INR",
+    "color": "Red",
+    "material": "Nylon/Spandex",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.4,
+      "count": 490
+    },
+    "description": "A retro-inspired high-waisted bikini set in a bold red color.",
+    "keywords": ["bikini", "swimwear", "high-waisted", "beach"],
+    "img_url": "https://picsum.photos/seed/92/400/600"
+  },
+  {
+    "id": 93,
+    "name": "Unisex Canvas D-Ring Belt",
+    "category": "Accessories",
+    "sub_category": "Belt",
+    "gender": "Unisex",
+    "brand": "Urban Threads",
+    "price": 2075.00,
+    "currency": "INR",
+    "color": "Beige",
+    "material": "Canvas",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.3,
+      "count": 1100
+    },
+    "description": "A casual and adjustable canvas belt with a double D-ring buckle.",
+    "keywords": ["belt", "canvas", "casual", "unisex"],
+    "img_url": "https://picsum.photos/seed/93/400/600"
+  },
+  {
+    "id": 94,
+    "name": "Men's Fleece-Lined Moccasin Slippers",
+    "category": "Footwear",
+    "sub_category": "Slippers",
+    "gender": "Men",
+    "brand": "Cozy Knits",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Brown",
+    "material": "Suede/Fleece",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1500
+    },
+    "description": "Warm and comfortable moccasin-style slippers with a soft fleece lining.",
+    "keywords": ["slippers", "moccasin", "fleece", "cozy"],
+    "img_url": "https://picsum.photos/seed/94/400/600"
+  },
+  {
+    "id": 95,
+    "name": "Women's Faux Fur Coat",
+    "category": "Outerwear",
+    "sub_category": "Coat",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 18675.00,
+    "currency": "INR",
+    "color": "Leopard Print",
+    "material": "Faux Fur",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 350
+    },
+    "description": "A glamorous and bold faux fur coat in a classic leopard print.",
+    "keywords": ["faux fur", "coat", "leopard print", "glamorous"],
+    "img_url": "https://picsum.photos/seed/95/400/600"
+  },
+  {
+    "id": 96,
+    "name": "Elegant Silver Cufflinks",
+    "category": "Accessories",
+    "sub_category": "Cufflinks",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Silver",
+    "material": "Stainless Steel",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 180
+    },
+    "description": "A pair of elegant, minimalist silver cufflinks for formal shirts.",
+    "keywords": ["cufflinks", "formal", "accessory", "business"],
+    "img_url": "https://picsum.photos/seed/96/400/600"
+  },
+  {
+    "id": 97,
+    "name": "Women's Athletic Leggings",
+    "category": "Activewear",
+    "sub_category": "Leggings",
+    "gender": "Women",
+    "brand": "FlexFit",
+    "price": 4565.00,
+    "currency": "INR",
+    "color": "Teal",
+    "material": "Nylon/Spandex",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1250
+    },
+    "description": "High-performance athletic leggings in a vibrant teal color, perfect for any workout.",
+    "keywords": ["leggings", "activewear", "gym", "workout"],
+    "img_url": "https://picsum.photos/seed/97/400/600"
+  },
+  {
+    "id": 98,
+    "name": "Men's Cable-Knit Fisherman Sweater",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Men",
+    "brand": "Cozy Knits",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "Cream",
+    "material": "Wool",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 980
+    },
+    "description": "A classic and timeless fisherman sweater with a traditional cable-knit pattern.",
+    "keywords": ["sweater", "cable-knit", "wool", "classic"],
+    "img_url": "https://picsum.photos/seed/98/400/600"
+  },
+  {
+    "id": 99,
+    "name": "Women's Block Heel Mules",
+    "category": "Footwear",
+    "sub_category": "Heels",
+    "gender": "Women",
+    "brand": "AuraWear",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "Tan",
+    "material": "Faux Leather",
+    "available_sizes": ["6", "7", "8", "9"],
+    "rating": {
+      "rate": 4.5,
+      "count": 580
+    },
+    "description": "Stylish and comfortable tan mules with a modern block heel.",
+    "keywords": ["mules", "block heel", "casual", "chic"],
+    "img_url": "https://picsum.photos/seed/99/400/600"
+  },
+  {
+    "id": 100,
+    "name": "Men's Leather Billfold Wallet",
+    "category": "Accessories",
+    "sub_category": "Wallet",
+    "gender": "Men",
+    "brand": "Artisan Guild",
+    "price": 5395.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1350
+    },
+    "description": "A classic billfold wallet crafted from genuine black leather with multiple card slots.",
+    "keywords": ["wallet", "leather", "accessory", "classic"],
+    "img_url": "https://picsum.photos/seed/100/400/600"
+  },
+  {
+    "id": 101,
+    "name": "Women's Heather Gray V-Neck T-Shirt",
+    "category": "Tops",
+    "sub_category": "T-Shirt",
+    "gender": "Women",
+    "brand": "Everyday Essentials",
+    "price": 2075.00,
+    "currency": "INR",
+    "color": "Heather Gray",
+    "material": "Cotton Blend",
+    "available_sizes": ["XS", "S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.6,
+      "count": 1950
+    },
+    "description": "A soft and versatile v-neck t-shirt in a classic heather gray.",
+    "keywords": ["t-shirt", "v-neck", "casual", "basic"],
+    "img_url": "https://picsum.photos/seed/101/400/600"
+  },
+  {
+    "id": 102,
+    "name": "Men's Tailored Black Dress Pants",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Polyester/Viscose Blend",
+    "available_sizes": ["30", "32", "34", "36"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1100
+    },
+    "description": "Sharply tailored black dress pants, a staple for any formal wardrobe.",
+    "keywords": ["dress pants", "formal", "business", "trousers"],
+    "img_url": "https://picsum.photos/seed/102/400/600"
+  },
+  {
+    "id": 103,
+    "name": "Women's White Lace Midi Dress",
+    "category": "Dresses",
+    "sub_category": "Midi Dress",
+    "gender": "Women",
+    "brand": "Graceful Garbs",
+    "price": 10375.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Lace",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 550
+    },
+    "description": "A romantic and delicate white lace midi dress, perfect for special occasions.",
+    "keywords": ["lace dress", "midi dress", "romantic", "formal"],
+    "img_url": "https://picsum.photos/seed/103/400/600"
+  },
+  {
+    "id": 104,
+    "name": "Men's Waterproof Hiking Boots",
+    "category": "Footwear",
+    "sub_category": "Boots",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 13280.00,
+    "currency": "INR",
+    "color": "Brown/Black",
+    "material": "Leather/Synthetic",
+    "available_sizes": ["9", "10", "11", "12"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1700
+    },
+    "description": "Durable and waterproof hiking boots designed for tough trails and all-weather conditions.",
+    "keywords": ["hiking boots", "waterproof", "outdoor", "adventure"],
+    "img_url": "https://picsum.photos/seed/104/400/600"
+  },
+  {
+    "id": 105,
+    "name": "Women's Turtleneck Sweater Dress",
+    "category": "Dresses",
+    "sub_category": "Sweater Dress",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "Charcoal Gray",
+    "material": "Knit",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 680
+    },
+    "description": "A cozy and chic turtleneck sweater dress, perfect for autumn and winter.",
+    "keywords": ["sweater dress", "turtleneck", "winter", "cozy"],
+    "img_url": "https://picsum.photos/seed/105/400/600"
+  },
+  {
+    "id": 106,
+    "name": "Men's Down Puffer Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Men",
+    "brand": "Apex Athletics",
+    "price": 14940.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Nylon/Down",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1240
+    },
+    "description": "A warm and lightweight down puffer jacket for cold weather.",
+    "keywords": ["puffer jacket", "down jacket", "winter", "warm"],
+    "img_url": "https://picsum.photos/seed/106/400/600"
+  },
+  {
+    "id": 107,
+    "name": "Women's Denim Overall Shorts",
+    "category": "Dresses",
+    "sub_category": "Jumpsuit",
+    "gender": "Women",
+    "brand": "Denim Co.",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "Light Blue Wash",
+    "material": "Denim",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.5,
+      "count": 810
+    },
+    "description": "Fun and casual denim overall shorts (dungarees) in a light blue wash.",
+    "keywords": ["overalls", "dungarees", "denim", "casual"],
+    "img_url": "https://picsum.photos/seed/107/400/600"
+  },
+  {
+    "id": 108,
+    "name": "Men's Classic Cotton Boxer Briefs",
+    "category": "Underwear",
+    "sub_category": "Boxer Briefs",
+    "gender": "Men",
+    "brand": "Everyday Essentials",
+    "price": 2490.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Cotton",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 3200
+    },
+    "description": "Comfortable and supportive classic boxer briefs made from soft cotton.",
+    "keywords": ["boxer briefs", "underwear", "cotton", "basic"],
+    "img_url": "https://picsum.photos/seed/108/400/600"
+  },
+  {
+    "id": 109,
+    "name": "Women's Wide-Brimmed Straw Sun Hat",
+    "category": "Accessories",
+    "sub_category": "Hat",
+    "gender": "Women",
+    "brand": "Sun Striders",
+    "price": 3320.00,
+    "currency": "INR",
+    "color": "Natural",
+    "material": "Straw",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.6,
+      "count": 920
+    },
+    "description": "A chic wide-brimmed straw hat for stylish sun protection.",
+    "keywords": ["sun hat", "straw hat", "beach", "summer"],
+    "img_url": "https://picsum.photos/seed/109/400/600"
+  },
+  {
+    "id": 110,
+    "name": "Men's Stainless Steel Chronograph Watch",
+    "category": "Accessories",
+    "sub_category": "Watch",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 20750.00,
+    "currency": "INR",
+    "color": "Silver/Black",
+    "material": "Stainless Steel",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1300
+    },
+    "description": "A sophisticated chronograph watch with a stainless steel bracelet and black dial.",
+    "keywords": ["watch", "chronograph", "stainless steel", "luxury"],
+    "img_url": "https://picsum.photos/seed/110/400/600"
+  },
+  {
+    "id": 111,
+    "name": "Women's Jersey Lounge Pants",
+    "category": "Bottoms",
+    "sub_category": "Loungewear",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 3735.00,
+    "currency": "INR",
+    "color": "Gray",
+    "material": "Jersey",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1050
+    },
+    "description": "Ultra-soft and comfortable jersey lounge pants for relaxing at home.",
+    "keywords": ["loungewear", "pajamas", "cozy", "comfort"],
+    "img_url": "https://picsum.photos/seed/111/400/600"
+  },
+  {
+    "id": 112,
+    "name": "Men's Classic Rugby Shirt",
+    "category": "Tops",
+    "sub_category": "Shirt",
+    "gender": "Men",
+    "brand": "Urban Threads",
+    "price": 6225.00,
+    "currency": "INR",
+    "color": "Navy/White Stripe",
+    "material": "Cotton",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 880
+    },
+    "description": "A classic long-sleeve rugby shirt with bold horizontal stripes and a twill collar.",
+    "keywords": ["rugby shirt", "striped", "casual", "preppy"],
+    "img_url": "https://picsum.photos/seed/112/400/600"
+  },
+  {
+    "id": 113,
+    "name": "Women's Knee-High Suede Boots",
+    "category": "Footwear",
+    "sub_category": "Boots",
+    "gender": "Women",
+    "brand": "Stiletto & Co.",
+    "price": 14940.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Suede",
+    "available_sizes": ["6", "7", "8", "9"],
+    "rating": {
+      "rate": 4.6,
+      "count": 610
+    },
+    "description": "Elegant and stylish knee-high boots in soft black suede with a comfortable block heel.",
+    "keywords": ["knee-high boots", "suede", "elegant", "winter"],
+    "img_url": "https://picsum.photos/seed/113/400/600"
+  },
+  {
+    "id": 114,
+    "name": "Men's Light Blue Poplin Dress Shirt",
+    "category": "Tops",
+    "sub_category": "Shirt",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 5810.00,
+    "currency": "INR",
+    "color": "Light Blue",
+    "material": "Poplin Cotton",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1340
+    },
+    "description": "A crisp and professional dress shirt made from smooth poplin cotton in a versatile light blue.",
+    "keywords": ["dress shirt", "formal", "business", "poplin"],
+    "img_url": "https://picsum.photos/seed/114/400/600"
+  },
+  {
+    "id": 115,
+    "name": "Women's Sequined Mini Dress",
+    "category": "Dresses",
+    "sub_category": "Mini Dress",
+    "gender": "Women",
+    "brand": "Evening Elegance",
+    "price": 12450.00,
+    "currency": "INR",
+    "color": "Silver",
+    "material": "Sequin",
+    "available_sizes": ["XS", "S", "M"],
+    "rating": {
+      "rate": 4.7,
+      "count": 290
+    },
+    "description": "A dazzling, show-stopping mini dress covered in shimmering silver sequins.",
+    "keywords": ["sequin dress", "party", "mini dress", "glamorous"],
+    "img_url": "https://picsum.photos/seed/115/400/600"
+  },
+  {
+    "id": 116,
+    "name": "Unisex Wool Blend Socks",
+    "category": "Accessories",
+    "sub_category": "Socks",
+    "gender": "Unisex",
+    "brand": "Cozy Knits",
+    "price": 1660.00,
+    "currency": "INR",
+    "color": "Gray",
+    "material": "Wool Blend",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1800
+    },
+    "description": "Warm and durable wool blend socks, perfect for cold weather and hiking.",
+    "keywords": ["socks", "wool", "winter", "cozy"],
+    "img_url": "https://picsum.photos/seed/116/400/600"
+  },
+  {
+    "id": 117,
+    "name": "Men's Varsity Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Men",
+    "brand": "Streetwise",
+    "price": 11620.00,
+    "currency": "INR",
+    "color": "Blue/White",
+    "material": "Wool/Leather",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 940
+    },
+    "description": "A classic American varsity jacket with a wool body and leather sleeves.",
+    "keywords": ["varsity jacket", "bomber", "streetwear", "retro"],
+    "img_url": "https://picsum.photos/seed/117/400/600"
+  },
+  {
+    "id": 118,
+    "name": "Women's Oversized Hoodie Dress",
+    "category": "Dresses",
+    "sub_category": "Sweater Dress",
+    "gender": "Women",
+    "brand": "Streetwise",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "Soft Pink",
+    "material": "Fleece",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.5,
+      "count": 830
+    },
+    "description": "A comfortable and trendy oversized hoodie dress for a relaxed, casual look.",
+    "keywords": ["hoodie dress", "oversized", "streetwear", "loungewear"],
+    "img_url": "https://picsum.photos/seed/118/400/600"
+  },
+  {
+    "id": 119,
+    "name": "Men's Leather Slide Sandals",
+    "category": "Footwear",
+    "sub_category": "Sandals",
+    "gender": "Men",
+    "brand": "Sun Striders",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Leather",
+    "available_sizes": ["8", "9", "10", "11"],
+    "rating": {
+      "rate": 4.4,
+      "count": 650
+    },
+    "description": "Comfortable and stylish leather slide sandals for easygoing summer days.",
+    "keywords": ["slides", "sandals", "leather", "summer"],
+    "img_url": "https://picsum.photos/seed/119/400/600"
+  },
+  {
+    "id": 120,
+    "name": "Women's Pearl Necklace",
+    "category": "Accessories",
+    "sub_category": "Necklace",
+    "gender": "Women",
+    "brand": "Graceful Garbs",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Pearl",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 450
+    },
+    "description": "An elegant and timeless single-strand pearl necklace with a silver clasp.",
+    "keywords": ["pearl necklace", "classic", "elegant", "formal"],
+    "img_url": "https://picsum.photos/seed/120/400/600"
+  },
+  {
+    "id": 121,
+    "name": "Men's Thermal Long-Sleeve Shirt",
+    "category": "Tops",
+    "sub_category": "T-Shirt",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 3735.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Waffle-Knit Cotton",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1300
+    },
+    "description": "A warm thermal long-sleeve shirt, perfect for layering in cold weather.",
+    "keywords": ["thermal", "long-sleeve", "layering", "winter"],
+    "img_url": "https://picsum.photos/seed/121/400/600"
+  },
+  {
+    "id": 122,
+    "name": "Women's Black Culotte Pants",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 6225.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Crepe",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.5,
+      "count": 510
+    },
+    "description": "Chic and modern wide-leg culotte pants that offer a sophisticated silhouette.",
+    "keywords": ["culottes", "wide-leg", "trousers", "chic"],
+    "img_url": "https://picsum.photos/seed/122/400/600"
+  },
+  {
+    "id": 123,
+    "name": "Men's Slim-Fit Tuxedo Jacket",
+    "category": "Outerwear",
+    "sub_category": "Blazer",
+    "gender": "Men",
+    "brand": "Evening Elegance",
+    "price": 18675.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Wool",
+    "available_sizes": ["38R", "40R", "42R"],
+    "rating": {
+      "rate": 4.9,
+      "count": 280
+    },
+    "description": "A sharp, slim-fit tuxedo jacket with satin lapels for the most formal events.",
+    "keywords": ["tuxedo", "formal", "black tie", "blazer"],
+    "img_url": "https://picsum.photos/seed/123/400/600"
+  },
+  {
+    "id": 124,
+    "name": "Women's Fleece-Lined Leggings",
+    "category": "Bottoms",
+    "sub_category": "Leggings",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 3320.00,
+    "currency": "INR",
+    "color": "Navy Blue",
+    "material": "Fleece/Spandex",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1950
+    },
+    "description": "Warm and cozy leggings with a soft fleece lining, perfect for winter.",
+    "keywords": ["fleece leggings", "winter", "cozy", "warm"],
+    "img_url": "https://picsum.photos/seed/124/400/600"
+  },
+  {
+    "id": 125,
+    "name": "Men's Braided Leather Bracelet",
+    "category": "Accessories",
+    "sub_category": "Bracelet",
+    "gender": "Men",
+    "brand": "Artisan Guild",
+    "price": 2905.00,
+    "currency": "INR",
+    "color": "Brown",
+    "material": "Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.6,
+      "count": 870
+    },
+    "description": "A stylish braided leather bracelet with a stainless steel magnetic clasp.",
+    "keywords": ["bracelet", "leather", "casual", "accessory"],
+    "img_url": "https://picsum.photos/seed/125/400/600"
+  },
+  {
+    "id": 126,
+    "name": "Women's Vibrant Patterned Silk Scarf",
+    "category": "Accessories",
+    "sub_category": "Scarf",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 4565.00,
+    "currency": "INR",
+    "color": "Multicolor",
+    "material": "Silk",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 420
+    },
+    "description": "A beautiful 100% silk scarf with a vibrant and artistic pattern.",
+    "keywords": ["silk scarf", "accessory", "vibrant", "luxury"],
+    "img_url": "https://picsum.photos/seed/126/400/600"
+  },
+  {
+    "id": 127,
+    "name": "Men's Khaki Cargo Pants",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 5810.00,
+    "currency": "INR",
+    "color": "Khaki",
+    "material": "Cotton Canvas",
+    "available_sizes": ["30", "32", "34", "36", "38"],
+    "rating": {
+      "rate": 4.5,
+      "count": 1550
+    },
+    "description": "Durable and functional cargo pants with ample pocket space for everyday adventures.",
+    "keywords": ["cargo pants", "utility", "casual", "trousers"],
+    "img_url": "https://picsum.photos/seed/127/400/600"
+  },
+  {
+    "id": 128,
+    "name": "Women's Classic Red Stiletto Pumps",
+    "category": "Footwear",
+    "sub_category": "Heels",
+    "gender": "Women",
+    "brand": "Stiletto & Co.",
+    "price": 9960.00,
+    "currency": "INR",
+    "color": "Red",
+    "material": "Faux Leather",
+    "available_sizes": ["6", "7", "8"],
+    "rating": {
+      "rate": 4.8,
+      "count": 680
+    },
+    "description": "A pair of timeless and bold red stiletto pumps with a pointed toe.",
+    "keywords": ["stiletto", "pumps", "heels", "red", "formal"],
+    "img_url": "https://picsum.photos/seed/128/400/600"
+  },
+  {
+    "id": 129,
+    "name": "Men's Brushed Steel Money Clip",
+    "category": "Accessories",
+    "sub_category": "Wallet",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 3320.00,
+    "currency": "INR",
+    "color": "Silver",
+    "material": "Stainless Steel",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 710
+    },
+    "description": "A sleek and minimalist money clip in brushed stainless steel for the modern man.",
+    "keywords": ["money clip", "minimalist", "accessory", "wallet"],
+    "img_url": "https://picsum.photos/seed/129/400/600"
+  },
+  {
+    "id": 130,
+    "name": "Women's Tie-Dye T-Shirt",
+    "category": "Tops",
+    "sub_category": "T-Shirt",
+    "gender": "Women",
+    "brand": "Streetwise",
+    "price": 2905.00,
+    "currency": "INR",
+    "color": "Multicolor Tie-Dye",
+    "material": "Cotton",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 1020
+    },
+    "description": "A fun and vibrant tie-dye t-shirt with a relaxed, casual fit.",
+    "keywords": ["tie-dye", "t-shirt", "casual", "bohemian"],
+    "img_url": "https://picsum.photos/seed/130/400/600"
+  },
+  {
+    "id": 131,
+    "name": "Men's Brown Corduroy Trousers",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Men",
+    "brand": "Riverbend",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "Brown",
+    "material": "Corduroy",
+    "available_sizes": ["30", "32", "34", "36"],
+    "rating": {
+      "rate": 4.5,
+      "count": 890
+    },
+    "description": "Classic corduroy trousers in a rich brown color, perfect for a smart-casual look.",
+    "keywords": ["corduroy", "trousers", "smart casual", "autumn"],
+    "img_url": "https://picsum.photos/seed/131/400/600"
+  },
+  {
+    "id": 132,
+    "name": "Women's Cat-Eye Sunglasses",
+    "category": "Accessories",
+    "sub_category": "Sunglasses",
+    "gender": "Women",
+    "brand": "Sun Ray",
+    "price": 7470.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Acetate",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 950
+    },
+    "description": "Chic and retro-inspired cat-eye sunglasses with dark lenses.",
+    "keywords": ["cat-eye", "sunglasses", "retro", "chic"],
+    "img_url": "https://picsum.photos/seed/132/400/600"
+  },
+  {
+    "id": 133,
+    "name": "Men's Waxed Canvas Field Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 14110.00,
+    "currency": "INR",
+    "color": "Olive Green",
+    "material": "Waxed Canvas",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.9,
+      "count": 780
+    },
+    "description": "A rugged, weather-resistant field jacket made from durable waxed canvas.",
+    "keywords": ["field jacket", "waxed canvas", "outdoor", "rugged"],
+    "img_url": "https://picsum.photos/seed/133/400/600"
+  },
+  {
+    "id": 134,
+    "name": "Women's Angora Blend Sweater",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "Light Blue",
+    "material": "Angora Blend",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 320
+    },
+    "description": "An incredibly soft and fluffy sweater made from a luxurious angora blend.",
+    "keywords": ["angora", "sweater", "soft", "fluffy"],
+    "img_url": "https://picsum.photos/seed/134/400/600"
+  },
+  {
+    "id": 135,
+    "name": "Men's Classic Espadrilles",
+    "category": "Footwear",
+    "sub_category": "Shoes",
+    "gender": "Men",
+    "brand": "Sun Striders",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Navy",
+    "material": "Canvas/Jute",
+    "available_sizes": ["8", "9", "10"],
+    "rating": {
+      "rate": 4.4,
+      "count": 610
+    },
+    "description": "Classic canvas espadrilles with a traditional jute sole, the perfect summer shoe.",
+    "keywords": ["espadrilles", "summer shoes", "casual", "beach"],
+    "img_url": "https://picsum.photos/seed/135/400/600"
+  },
+  {
+    "id": 136,
+    "name": "Women's Pleated Satin Midi Skirt",
+    "category": "Bottoms",
+    "sub_category": "Skirt",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 7055.00,
+    "currency": "INR",
+    "color": "Champagne",
+    "material": "Satin",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 420
+    },
+    "description": "An elegant and shimmering pleated midi skirt made from luxurious satin.",
+    "keywords": ["satin skirt", "pleated", "midi skirt", "elegant"],
+    "img_url": "https://picsum.photos/seed/136/400/600"
+  },
+  {
+    "id": 137,
+    "name": "Men's Tweed Blazer",
+    "category": "Outerwear",
+    "sub_category": "Blazer",
+    "gender": "Men",
+    "brand": "Riverbend",
+    "price": 13280.00,
+    "currency": "INR",
+    "color": "Brown Tweed",
+    "material": "Tweed",
+    "available_sizes": ["40R", "42R", "44R"],
+    "rating": {
+      "rate": 4.7,
+      "count": 510
+    },
+    "description": "A classic tweed blazer with elbow patches, perfect for a heritage-inspired look.",
+    "keywords": ["tweed blazer", "heritage", "smart casual", "classic"],
+    "img_url": "https://picsum.photos/seed/137/400/600"
+  },
+  {
+    "id": 138,
+    "name": "Women's Clear-Strap Block Heels",
+    "category": "Footwear",
+    "sub_category": "Heels",
+    "gender": "Women",
+    "brand": "AuraWear",
+    "price": 6225.00,
+    "currency": "INR",
+    "color": "Nude/Clear",
+    "material": "Vinyl",
+    "available_sizes": ["6", "7", "8"],
+    "rating": {
+      "rate": 4.2,
+      "count": 280
+    },
+    "description": "Modern and minimalist block heels with a trendy clear vinyl strap.",
+    "keywords": ["clear heels", "block heels", "modern", "minimalist"],
+    "img_url": "https://picsum.photos/seed/138/400/600"
+  },
+  {
+    "id": 139,
+    "name": "Men's Silver Tie Bar",
+    "category": "Accessories",
+    "sub_category": "Tie Bar",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 2490.00,
+    "currency": "INR",
+    "color": "Silver",
+    "material": "Stainless Steel",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 980
+    },
+    "description": "A sleek and simple silver tie bar to keep your tie perfectly in place.",
+    "keywords": ["tie bar", "tie clip", "formal", "accessory"],
+    "img_url": "https://picsum.photos/seed/139/400/600"
+  },
+  {
+    "id": 140,
+    "name": "Women's Oversized Knit Scarf",
+    "category": "Accessories",
+    "sub_category": "Scarf",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Beige",
+    "material": "Acrylic",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1150
+    },
+    "description": "A huge, soft, and cozy oversized knit scarf for maximum warmth.",
+    "keywords": ["oversized scarf", "chunky knit", "winter", "cozy"],
+    "img_url": "https://picsum.photos/seed/140/400/600"
+  },
+  {
+    "id": 141,
+    "name": "Men's Non-Iron Dress Shirt",
+    "category": "Tops",
+    "sub_category": "Shirt",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Cotton Blend",
+    "available_sizes": ["15.5", "16", "16.5", "17"],
+    "rating": {
+      "rate": 4.8,
+      "count": 2100
+    },
+    "description": "A crisp white dress shirt made with a non-iron cotton blend for a wrinkle-free look all day.",
+    "keywords": ["non-iron", "dress shirt", "business", "formal"],
+    "img_url": "https://picsum.photos/seed/141/400/600"
+  },
+  {
+    "id": 142,
+    "name": "Women's Athletic Running Sneakers",
+    "category": "Footwear",
+    "sub_category": "Sneakers",
+    "gender": "Women",
+    "brand": "Apex Athletics",
+    "price": 9545.00,
+    "currency": "INR",
+    "color": "Pink/Neon",
+    "material": "Mesh",
+    "available_sizes": ["6", "7", "8", "9"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1400
+    },
+    "description": "Lightweight and breathable running sneakers with vibrant neon accents.",
+    "keywords": ["running sneakers", "athletic", "gym", "workout"],
+    "img_url": "https://picsum.photos/seed/142/400/600"
+  },
+  {
+    "id": 143,
+    "name": "Men's Leather Biker Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Men",
+    "brand": "Rebel Rider",
+    "price": 24900.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Leather",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.9,
+      "count": 980
+    },
+    "description": "A classic, rugged leather biker jacket with asymmetrical zips and a belted waist.",
+    "keywords": ["biker jacket", "leather jacket", "moto", "edgy"],
+    "img_url": "https://picsum.photos/seed/143/400/600"
+  },
+  {
+    "id": 144,
+    "name": "Women's Cashmere Poncho",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 14525.00,
+    "currency": "INR",
+    "color": "Gray",
+    "material": "Cashmere",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 380
+    },
+    "description": "An elegant and incredibly soft cashmere poncho for a touch of quiet luxury.",
+    "keywords": ["poncho", "cashmere", "luxury", "elegant"],
+    "img_url": "https://picsum.photos/seed/144/400/600"
+  },
+  {
+    "id": 145,
+    "name": "Men's Suede Driving Moccasins",
+    "category": "Footwear",
+    "sub_category": "Shoes",
+    "gender": "Men",
+    "brand": "Cobbler's Craft",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "Navy",
+    "material": "Suede",
+    "available_sizes": ["8", "9", "10"],
+    "rating": {
+      "rate": 4.6,
+      "count": 550
+    },
+    "description": "Comfortable and stylish suede driving moccasins with a flexible rubber sole.",
+    "keywords": ["driving shoes", "moccasins", "suede", "smart casual"],
+    "img_url": "https://picsum.photos/seed/145/400/600"
+  },
+  {
+    "id": 146,
+    "name": "Women's Bucket Bag",
+    "category": "Accessories",
+    "sub_category": "Handbag",
+    "gender": "Women",
+    "brand": "Artisan Guild",
+    "price": 9960.00,
+    "currency": "INR",
+    "color": "Tan",
+    "material": "Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 620
+    },
+    "description": "A chic and spacious leather bucket bag with a drawstring closure.",
+    "keywords": ["bucket bag", "leather", "handbag", "chic"],
+    "img_url": "https://picsum.photos/seed/146/400/600"
+  },
+  {
+    "id": 147,
+    "name": "Men's Shawl Collar Cardigan",
+    "category": "Tops",
+    "sub_category": "Sweater",
+    "gender": "Men",
+    "brand": "Cozy Knits",
+    "price": 9130.00,
+    "currency": "INR",
+    "color": "Charcoal Gray",
+    "material": "Wool",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 710
+    },
+    "description": "A sophisticated and cozy shawl collar cardigan made from warm wool.",
+    "keywords": ["cardigan", "shawl collar", "wool", "smart casual"],
+    "img_url": "https://picsum.photos/seed/147/400/600"
+  },
+  {
+    "id": 148,
+    "name": "Women's Beach Cover-Up",
+    "category": "Dresses",
+    "sub_category": "Kaftan",
+    "gender": "Women",
+    "brand": "Sun Striders",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Cotton Voile",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.5,
+      "count": 530
+    },
+    "description": "A lightweight and breezy beach cover-up with tassel ties.",
+    "keywords": ["beach cover-up", "kaftan", "summer", "swimwear"],
+    "img_url": "https://picsum.photos/seed/148/400/600"
+  },
+  {
+    "id": 149,
+    "name": "Men's Simple Leather Cardholder",
+    "category": "Accessories",
+    "sub_category": "Wallet",
+    "gender": "Men",
+    "brand": "Artisan Guild",
+    "price": 2905.00,
+    "currency": "INR",
+    "color": "Dark Brown",
+    "material": "Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1400
+    },
+    "description": "A slim and minimalist leather cardholder for just the essentials.",
+    "keywords": ["cardholder", "wallet", "leather", "minimalist"],
+    "img_url": "https://picsum.photos/seed/149/400/600"
+  },
+  {
+    "id": 150,
+    "name": "Women's Tailored Wool Coat",
+    "category": "Outerwear",
+    "sub_category": "Coat",
+    "gender": "Women",
+    "brand": "Zenith",
+    "price": 24900.00,
+    "currency": "INR",
+    "color": "Camel",
+    "material": "Wool",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.9,
+      "count": 850
+    },
+    "description": "A timeless and elegant tailored coat in a classic camel-colored wool.",
+    "keywords": ["wool coat", "camel coat", "timeless", "elegant"],
+    "img_url": "https://picsum.photos/seed/150/400/600"
+  },
+  {
+    "id": 151,
+    "name": "Men's Basic Crewneck Sweatshirt",
+    "category": "Tops",
+    "sub_category": "Sweatshirt",
+    "gender": "Men",
+    "brand": "Everyday Essentials",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Gray",
+    "material": "Fleece",
+    "available_sizes": ["S", "M", "L", "XL", "XXL"],
+    "rating": {
+      "rate": 4.7,
+      "count": 2800
+    },
+    "description": "A classic and comfortable crewneck sweatshirt for everyday wear.",
+    "keywords": ["sweatshirt", "crewneck", "casual", "basic"],
+    "img_url": "https://picsum.photos/seed/151/400/600"
+  },
+  {
+    "id": 152,
+    "name": "Women's Paperbag-Waist Trousers",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "Olive Green",
+    "material": "Tencel",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 620
+    },
+    "description": "Trendy and flattering trousers with a high, paperbag-style waist and tie belt.",
+    "keywords": ["paperbag waist", "trousers", "trendy", "chic"],
+    "img_url": "https://picsum.photos/seed/152/400/600"
+  },
+  {
+    "id": 153,
+    "name": "Men's Hiking Socks",
+    "category": "Accessories",
+    "sub_category": "Socks",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 2075.00,
+    "currency": "INR",
+    "color": "Gray/Orange",
+    "material": "Merino Wool Blend",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1500
+    },
+    "description": "Durable, moisture-wicking hiking socks with reinforced heels and toes.",
+    "keywords": ["hiking socks", "wool", "outdoor", "performance"],
+    "img_url": "https://picsum.photos/seed/153/400/600"
+  },
+  {
+    "id": 154,
+    "name": "Women's Structured Top-Handle Handbag",
+    "category": "Accessories",
+    "sub_category": "Handbag",
+    "gender": "Women",
+    "brand": "Graceful Garbs",
+    "price": 10790.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Faux Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 480
+    },
+    "description": "A chic and structured handbag with a top handle and optional crossbody strap.",
+    "keywords": ["top-handle bag", "structured", "handbag", "chic"],
+    "img_url": "https://picsum.photos/seed/154/400/600"
+  },
+  {
+    "id": 155,
+    "name": "Men's Double-Breasted Suit Jacket",
+    "category": "Outerwear",
+    "sub_category": "Blazer",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 19090.00,
+    "currency": "INR",
+    "color": "Charcoal Gray",
+    "material": "Wool",
+    "available_sizes": ["40R", "42R", "44R"],
+    "rating": {
+      "rate": 4.8,
+      "count": 410
+    },
+    "description": "A powerful and sophisticated double-breasted suit jacket in charcoal wool.",
+    "keywords": ["double-breasted", "suit jacket", "formal", "business"],
+    "img_url": "https://picsum.photos/seed/155/400/600"
+  },
+  {
+    "id": 156,
+    "name": "Women's Plush Sherpa-Lined Hoodie",
+    "category": "Tops",
+    "sub_category": "Hoodie",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 7470.00,
+    "currency": "INR",
+    "color": "Light Gray",
+    "material": "Sherpa Fleece",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1600
+    },
+    "description": "The ultimate cozy hoodie with a plush and warm sherpa fleece lining.",
+    "keywords": ["sherpa", "hoodie", "cozy", "loungewear"],
+    "img_url": "https://picsum.photos/seed/156/400/600"
+  },
+  {
+    "id": 157,
+    "name": "Men's Colorful Board Shorts",
+    "category": "Activewear",
+    "sub_category": "Swimwear",
+    "gender": "Men",
+    "brand": "Sun Striders",
+    "price": 3735.00,
+    "currency": "INR",
+    "color": "Multicolor Geometric",
+    "material": "Polyester",
+    "available_sizes": ["30", "32", "34", "36"],
+    "rating": {
+      "rate": 4.6,
+      "count": 680
+    },
+    "description": "Vibrant board shorts with a geometric pattern, made from quick-dry fabric.",
+    "keywords": ["board shorts", "swimwear", "beach", "summer"],
+    "img_url": "https://picsum.photos/seed/157/400/600"
+  },
+  {
+    "id": 158,
+    "name": "Women's Satin Pajama Set",
+    "category": "Loungewear",
+    "sub_category": "Pajamas",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "Navy Blue",
+    "material": "Satin",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 720
+    },
+    "description": "An elegant and comfortable satin pajama set with contrast piping.",
+    "keywords": ["pajamas", "satin", "loungewear", "luxury"],
+    "img_url": "https://picsum.photos/seed/158/400/600"
+  },
+  {
+    "id": 159,
+    "name": "Men's Luxury Silk Robe",
+    "category": "Loungewear",
+    "sub_category": "Robe",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 14940.00,
+    "currency": "INR",
+    "color": "Burgundy",
+    "material": "Silk",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 310
+    },
+    "description": "A luxurious and sophisticated robe made from 100% pure silk.",
+    "keywords": ["robe", "silk", "loungewear", "luxury"],
+    "img_url": "https://picsum.photos/seed/159/400/600"
+  },
+  {
+    "id": 160,
+    "name": "Women's Fuzzy Novelty Slippers",
+    "category": "Footwear",
+    "sub_category": "Slippers",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 2905.00,
+    "currency": "INR",
+    "color": "Pink",
+    "material": "Faux Fur",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1250
+    },
+    "description": "Fun and incredibly soft fuzzy slippers for ultimate home comfort.",
+    "keywords": ["slippers", "fuzzy", "cozy", "loungewear"],
+    "img_url": "https://picsum.photos/seed/160/400/600"
+  },
+  {
+    "id": 161,
+    "name": "Men's Moisture-Wicking Athletic T-Shirt",
+    "category": "Activewear",
+    "sub_category": "T-Shirt",
+    "gender": "Men",
+    "brand": "Apex Athletics",
+    "price": 3320.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Polyester",
+    "available_sizes": ["S", "M", "L", "XL"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1800
+    },
+    "description": "A high-performance t-shirt with moisture-wicking technology to keep you dry during workouts.",
+    "keywords": ["athletic shirt", "activewear", "gym", "performance"],
+    "img_url": "https://picsum.photos/seed/161/400/600"
+  },
+  {
+    "id": 162,
+    "name": "Women's Wide-Leg Jeans",
+    "category": "Bottoms",
+    "sub_category": "Jeans",
+    "gender": "Women",
+    "brand": "Denim Co.",
+    "price": 7055.00,
+    "currency": "INR",
+    "color": "Light Wash",
+    "material": "Denim",
+    "available_sizes": ["26", "28", "30", "32"],
+    "rating": {
+      "rate": 4.6,
+      "count": 950
+    },
+    "description": "Trendy and comfortable wide-leg jeans in a vintage-inspired light wash.",
+    "keywords": ["wide-leg jeans", "denim", "retro", "casual"],
+    "img_url": "https://picsum.photos/seed/162/400/600"
+  },
+  {
+    "id": 163,
+    "name": "Men's Flannel-Lined Work Pants",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 7470.00,
+    "currency": "INR",
+    "color": "Tan",
+    "material": "Canvas/Flannel",
+    "available_sizes": ["32", "34", "36", "38"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1100
+    },
+    "description": "Durable canvas work pants with a warm flannel lining for cold conditions.",
+    "keywords": ["work pants", "flannel-lined", "rugged", "durable"],
+    "img_url": "https://picsum.photos/seed/163/400/600"
+  },
+  {
+    "id": 164,
+    "name": "Women's Embroidered Blouse",
+    "category": "Tops",
+    "sub_category": "Blouse",
+    "gender": "Women",
+    "brand": "Graceful Garbs",
+    "price": 6225.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Cotton",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 480
+    },
+    "description": "A beautiful white cotton blouse with delicate floral embroidery.",
+    "keywords": ["embroidered", "blouse", "bohemian", "feminine"],
+    "img_url": "https://picsum.photos/seed/164/400/600"
+  },
+  {
+    "id": 165,
+    "name": "Men's Classic Canvas Slip-On Shoes",
+    "category": "Footwear",
+    "sub_category": "Shoes",
+    "gender": "Men",
+    "brand": "Urban Threads",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Gray",
+    "material": "Canvas",
+    "available_sizes": ["8", "9", "10", "11"],
+    "rating": {
+      "rate": 4.5,
+      "count": 2200
+    },
+    "description": "Easy and comfortable canvas slip-on shoes for everyday casual wear.",
+    "keywords": ["slip-on", "canvas shoes", "casual", "summer"],
+    "img_url": "https://picsum.photos/seed/165/400/600"
+  },
+  {
+    "id": 166,
+    "name": "Women's Felt Fedora Hat",
+    "category": "Accessories",
+    "sub_category": "Hat",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 4565.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Felt",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 650
+    },
+    "description": "A chic and stylish wide-brim fedora hat made from black felt.",
+    "keywords": ["fedora", "hat", "chic", "accessory"],
+    "img_url": "https://picsum.photos/seed/166/400/600"
+  },
+  {
+    "id": 167,
+    "name": "Men's Peached Cotton Chino Pants",
+    "category": "Bottoms",
+    "sub_category": "Trousers",
+    "gender": "Men",
+    "brand": "Riverbend",
+    "price": 5810.00,
+    "currency": "INR",
+    "color": "Navy",
+    "material": "Peached Cotton",
+    "available_sizes": ["30", "32", "34", "36"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1350
+    },
+    "description": "Incredibly soft chino pants made from peached cotton for a velvety feel.",
+    "keywords": ["chinos", "soft", "smart casual", "trousers"],
+    "img_url": "https://picsum.photos/seed/167/400/600"
+  },
+  {
+    "id": 168,
+    "name": "Women's Oversized Square Sunglasses",
+    "category": "Accessories",
+    "sub_category": "Sunglasses",
+    "gender": "Women",
+    "brand": "Sun Ray",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "Tortoise Shell",
+    "material": "Acetate",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.6,
+      "count": 810
+    },
+    "description": "Glamorous and bold oversized square sunglasses in a classic tortoise shell pattern.",
+    "keywords": ["oversized sunglasses", "square", "glamorous", "chic"],
+    "img_url": "https://picsum.photos/seed/168/400/600"
+  },
+  {
+    "id": 169,
+    "name": "Men's Titanium Wedding Band",
+    "category": "Accessories",
+    "sub_category": "Ring",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 7470.00,
+    "currency": "INR",
+    "color": "Gray",
+    "material": "Titanium",
+    "available_sizes": ["9", "10", "11", "12"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1500
+    },
+    "description": "A durable, lightweight, and modern wedding band crafted from brushed titanium.",
+    "keywords": ["ring", "wedding band", "titanium", "modern"],
+    "img_url": "https://picsum.photos/seed/169/400/600"
+  },
+  {
+    "id": 170,
+    "name": "Women's Cable-Knit Beanie and Gloves Set",
+    "category": "Accessories",
+    "sub_category": "Set",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Cream",
+    "material": "Knit",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 920
+    },
+    "description": "A matching set of a cozy cable-knit beanie and gloves for winter.",
+    "keywords": ["beanie", "gloves", "winter set", "cozy"],
+    "img_url": "https://picsum.photos/seed/170/400/600"
+  },
+  {
+    "id": 171,
+    "name": "Men's Technical Shell Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Men",
+    "brand": "Apex Athletics",
+    "price": 12450.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Gore-Tex",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1150
+    },
+    "description": "A high-performance technical shell jacket that is both waterproof and breathable.",
+    "keywords": ["shell jacket", "waterproof", "outdoor", "performance"],
+    "img_url": "https://picsum.photos/seed/171/400/600"
+  },
+  {
+    "id": 172,
+    "name": "Women's One-Piece Swimsuit",
+    "category": "Activewear",
+    "sub_category": "Swimwear",
+    "gender": "Women",
+    "brand": "Sun Striders",
+    "price": 7055.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Nylon/Spandex",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 680
+    },
+    "description": "A classic and elegant one-piece swimsuit with a flattering silhouette.",
+    "keywords": ["one-piece", "swimsuit", "beach", "classic"],
+    "img_url": "https://picsum.photos/seed/172/400/600"
+  },
+  {
+    "id": 173,
+    "name": "Men's Canvas and Leather Backpack",
+    "category": "Accessories",
+    "sub_category": "Backpack",
+    "gender": "Men",
+    "brand": "Riverbend",
+    "price": 9130.00,
+    "currency": "INR",
+    "color": "Olive Green/Brown",
+    "material": "Canvas/Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1020
+    },
+    "description": "A durable and stylish backpack made from a combination of canvas and genuine leather trim.",
+    "keywords": ["backpack", "canvas", "leather", "vintage"],
+    "img_url": "https://picsum.photos/seed/173/400/600"
+  },
+  {
+    "id": 174,
+    "name": "Women's Faux-Wrap Sweater Dress",
+    "category": "Dresses",
+    "sub_category": "Sweater Dress",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 9130.00,
+    "currency": "INR",
+    "color": "Burgundy",
+    "material": "Knit",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 550
+    },
+    "description": "An elegant and comfortable sweater dress with a flattering faux-wrap design.",
+    "keywords": ["sweater dress", "wrap dress", "elegant", "winter"],
+    "img_url": "https://picsum.photos/seed/174/400/600"
+  },
+  {
+    "id": 175,
+    "name": "Men's No-Show Socks",
+    "category": "Accessories",
+    "sub_category": "Socks",
+    "gender": "Men",
+    "brand": "Everyday Essentials",
+    "price": 1660.00,
+    "currency": "INR",
+    "color": "Variety Pack",
+    "material": "Cotton Blend",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 4500
+    },
+    "description": "A pack of comfortable no-show socks with a non-slip heel grip.",
+    "keywords": ["no-show socks", "socks", "basic", "essential"],
+    "img_url": "https://picsum.photos/seed/175/400/600"
+  },
+  {
+    "id": 176,
+    "name": "Women's Gold-Tone Chain Necklace",
+    "category": "Accessories",
+    "sub_category": "Necklace",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Gold",
+    "material": "Metal",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.5,
+      "count": 720
+    },
+    "description": "A trendy and versatile chain-link necklace in a polished gold-tone finish.",
+    "keywords": ["chain necklace", "gold-tone", "trendy", "accessory"],
+    "img_url": "https://picsum.photos/seed/176/400/600"
+  },
+  {
+    "id": 177,
+    "name": "Men's V-Neck Argyle Sweater Vest",
+    "category": "Tops",
+    "sub_category": "Vest",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 5395.00,
+    "currency": "INR",
+    "color": "Navy/Gray Argyle",
+    "material": "Cotton",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.4,
+      "count": 480
+    },
+    "description": "A classic argyle sweater vest for a preppy, layered look.",
+    "keywords": ["sweater vest", "argyle", "preppy", "classic"],
+    "img_url": "https://picsum.photos/seed/177/400/600"
+  },
+  {
+    "id": 178,
+    "name": "Women's Sock-Style Ankle Boots",
+    "category": "Footwear",
+    "sub_category": "Boots",
+    "gender": "Women",
+    "brand": "AuraWear",
+    "price": 9130.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Knit",
+    "available_sizes": ["6", "7", "8"],
+    "rating": {
+      "rate": 4.6,
+      "count": 610
+    },
+    "description": "Modern and sleek ankle boots with a stretchy, sock-like upper and a stiletto heel.",
+    "keywords": ["sock boots", "ankle boots", "modern", "chic"],
+    "img_url": "https://picsum.photos/seed/178/400/600"
+  },
+  {
+    "id": 179,
+    "name": "Men's Woven Fabric Belt",
+    "category": "Accessories",
+    "sub_category": "Belt",
+    "gender": "Men",
+    "brand": "Riverbend",
+    "price": 3320.00,
+    "currency": "INR",
+    "color": "Blue/Beige",
+    "material": "Fabric/Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.5,
+      "count": 910
+    },
+    "description": "A casual woven fabric belt with leather trim for a relaxed, textured look.",
+    "keywords": ["woven belt", "fabric belt", "casual", "accessory"],
+    "img_url": "https://picsum.photos/seed/179/400/600"
+  },
+  {
+    "id": 180,
+    "name": "Women's Beaded Clutch Evening Bag",
+    "category": "Accessories",
+    "sub_category": "Handbag",
+    "gender": "Women",
+    "brand": "Evening Elegance",
+    "price": 8295.00,
+    "currency": "INR",
+    "color": "Silver",
+    "material": "Beads/Satin",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 250
+    },
+    "description": "An exquisite evening clutch bag adorned with intricate silver beadwork.",
+    "keywords": ["clutch bag", "evening bag", "beaded", "formal"],
+    "img_url": "https://picsum.photos/seed/180/400/600"
+  },
+  {
+    "id": 181,
+    "name": "Men's Pique Knit Bathrobe",
+    "category": "Loungewear",
+    "sub_category": "Robe",
+    "gender": "Men",
+    "brand": "Everyday Essentials",
+    "price": 6640.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Pique Cotton",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1100
+    },
+    "description": "A lightweight and absorbent bathrobe made from a textured pique knit cotton.",
+    "keywords": ["bathrobe", "robe", "pique", "loungewear"],
+    "img_url": "https://picsum.photos/seed/181/400/600"
+  },
+  {
+    "id": 182,
+    "name": "Women's Printed Yoga Leggings",
+    "category": "Activewear",
+    "sub_category": "Leggings",
+    "gender": "Women",
+    "brand": "FlexFit",
+    "price": 4980.00,
+    "currency": "INR",
+    "color": "Galaxy Print",
+    "material": "Polyester/Spandex",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 980
+    },
+    "description": "Fun and flexible yoga leggings with a vibrant and cosmic galaxy print.",
+    "keywords": ["yoga leggings", "printed leggings", "activewear", "gym"],
+    "img_url": "https://picsum.photos/seed/182/400/600"
+  },
+  {
+    "id": 183,
+    "name": "Men's Insulated Work Boots",
+    "category": "Footwear",
+    "sub_category": "Boots",
+    "gender": "Men",
+    "brand": "Outdoor Gear",
+    "price": 14940.00,
+    "currency": "INR",
+    "color": "Tan",
+    "material": "Leather",
+    "available_sizes": ["9", "10", "11", "12", "13"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1600
+    },
+    "description": "Tough, insulated, and waterproof leather work boots for demanding jobs.",
+    "keywords": ["work boots", "insulated", "leather", "durable"],
+    "img_url": "https://picsum.photos/seed/183/400/600"
+  },
+  {
+    "id": 184,
+    "name": "Women's Silk-Blend Camisole and Shorts Set",
+    "category": "Loungewear",
+    "sub_category": "Pajamas",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 7470.00,
+    "currency": "INR",
+    "color": "Dusty Rose",
+    "material": "Silk Blend",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 520
+    },
+    "description": "A delicate and luxurious sleep set including a camisole and shorts in a silk blend.",
+    "keywords": ["pajama set", "silk", "loungewear", "elegant"],
+    "img_url": "https://picsum.photos/seed/184/400/600"
+  },
+  {
+    "id": 185,
+    "name": "Men's Slim Front Pocket Wallet",
+    "category": "Accessories",
+    "sub_category": "Wallet",
+    "gender": "Men",
+    "brand": "Zenith",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Leather",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 2100
+    },
+    "description": "An ultra-slim leather wallet designed for front pocket carry, with RFID blocking.",
+    "keywords": ["slim wallet", "front pocket wallet", "minimalist", "leather"],
+    "img_url": "https://picsum.photos/seed/185/400/600"
+  },
+  {
+    "id": 186,
+    "name": "Women's Classic Red Beret",
+    "category": "Accessories",
+    "sub_category": "Hat",
+    "gender": "Women",
+    "brand": "VogueVenture",
+    "price": 3320.00,
+    "currency": "INR",
+    "color": "Red",
+    "material": "Wool",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 480
+    },
+    "description": "A chic and timeless Parisian-style beret in a bold red wool.",
+    "keywords": ["beret", "hat", "french chic", "classic"],
+    "img_url": "https://picsum.photos/seed/186/400/600"
+  },
+  {
+    "id": 187,
+    "name": "Men's Seersucker Blazer",
+    "category": "Outerwear",
+    "sub_category": "Blazer",
+    "gender": "Men",
+    "brand": "Riverbend",
+    "price": 10790.00,
+    "currency": "INR",
+    "color": "Blue/White Stripe",
+    "material": "Seersucker",
+    "available_sizes": ["40R", "42R", "44R"],
+    "rating": {
+      "rate": 4.6,
+      "count": 390
+    },
+    "description": "A lightweight and breathable seersucker blazer, perfect for summer events.",
+    "keywords": ["seersucker", "blazer", "summer", "smart casual"],
+    "img_url": "https://picsum.photos/seed/187/400/600"
+  },
+  {
+    "id": 188,
+    "name": "Women's Chunky 'Dad' Sneakers",
+    "category": "Footwear",
+    "sub_category": "Sneakers",
+    "gender": "Women",
+    "brand": "Streetwise",
+    "price": 9960.00,
+    "currency": "INR",
+    "color": "White/Beige",
+    "material": "Leather/Mesh",
+    "available_sizes": ["6", "7", "8", "9"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1450
+    },
+    "description": "Trendy and comfortable chunky sneakers with a retro 'dad shoe' silhouette.",
+    "keywords": ["chunky sneakers", "dad sneakers", "streetwear", "trendy"],
+    "img_url": "https://picsum.photos/seed/188/400/600"
+  },
+  {
+    "id": 189,
+    "name": "Men's Military-Style Dog Tag Necklace",
+    "category": "Accessories",
+    "sub_category": "Necklace",
+    "gender": "Men",
+    "brand": "Rebel Rider",
+    "price": 3735.00,
+    "currency": "INR",
+    "color": "Silver",
+    "material": "Stainless Steel",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.5,
+      "count": 850
+    },
+    "description": "A classic military-style dog tag necklace on a ball chain.",
+    "keywords": ["dog tag", "necklace", "military", "casual"],
+    "img_url": "https://picsum.photos/seed/189/400/600"
+  },
+  {
+    "id": 190,
+    "name": "Women's Timepiece with Leather Strap",
+    "category": "Accessories",
+    "sub_category": "Watch",
+    "gender": "Women",
+    "brand": "Zenith",
+    "price": 12450.00,
+    "currency": "INR",
+    "color": "Rose Gold/Brown",
+    "material": "Leather/Metal",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 680
+    },
+    "description": "An elegant and minimalist timepiece with a rose gold case and a brown leather strap.",
+    "keywords": ["watch", "timepiece", "elegant", "leather strap"],
+    "img_url": "https://picsum.photos/seed/190/400/600"
+  },
+  {
+    "id": 191,
+    "name": "Men's Muscle-Fit Tank Top",
+    "category": "Activewear",
+    "sub_category": "Tank Top",
+    "gender": "Men",
+    "brand": "Apex Athletics",
+    "price": 2490.00,
+    "currency": "INR",
+    "color": "White",
+    "material": "Cotton/Spandex",
+    "available_sizes": ["S", "M", "L"],
+    "rating": {
+      "rate": 4.7,
+      "count": 1120
+    },
+    "description": "A form-fitting tank top designed to highlight physique, made from a stretchy cotton blend.",
+    "keywords": ["muscle tank", "gym", "activewear", "fitness"],
+    "img_url": "https://picsum.photos/seed/191/400/600"
+  },
+  {
+    "id": 192,
+    "name": "Women's Fruit-Patterned Pajama Shorts",
+    "category": "Loungewear",
+    "sub_category": "Pajamas",
+    "gender": "Women",
+    "brand": "Cozy Knits",
+    "price": 2905.00,
+    "currency": "INR",
+    "color": "White/Multicolor",
+    "material": "Cotton",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 780
+    },
+    "description": "Fun and comfortable pajama shorts with a playful all-over fruit pattern.",
+    "keywords": ["pajama shorts", "loungewear", "fun", "cotton"],
+    "img_url": "https://picsum.photos/seed/192/400/600"
+  },
+  {
+    "id": 193,
+    "name": "Men's Shearling-Lined Denim Jacket",
+    "category": "Outerwear",
+    "sub_category": "Jacket",
+    "gender": "Men",
+    "brand": "Denim Co.",
+    "price": 12450.00,
+    "currency": "INR",
+    "color": "Blue",
+    "material": "Denim/Sherpa",
+    "available_sizes": ["M", "L", "XL"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1300
+    },
+    "description": "A classic denim jacket with a warm and cozy shearling (sherpa) lining and collar.",
+    "keywords": ["sherpa jacket", "denim jacket", "winter", "warm"],
+    "img_url": "https://picsum.photos/seed/193/400/600"
+  },
+  {
+    "id": 194,
+    "name": "Women's Long Satin Evening Gloves",
+    "category": "Accessories",
+    "sub_category": "Gloves",
+    "gender": "Women",
+    "brand": "Evening Elegance",
+    "price": 4150.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Satin",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.8,
+      "count": 320
+    },
+    "description": "Elegant, opera-length evening gloves made from a smooth, black satin.",
+    "keywords": ["evening gloves", "satin", "formal", "elegant"],
+    "img_url": "https://picsum.photos/seed/194/400/600"
+  },
+  {
+    "id": 195,
+    "name": "Men's Classic Leather Dress Belt",
+    "category": "Accessories",
+    "sub_category": "Belt",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 4565.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Leather",
+    "available_sizes": ["32", "34", "36", "38"],
+    "rating": {
+      "rate": 4.9,
+      "count": 1950
+    },
+    "description": "A classic and essential dress belt crafted from genuine black leather with a silver buckle.",
+    "keywords": ["dress belt", "leather", "formal", "business"],
+    "img_url": "https://picsum.photos/seed/195/400/600"
+  },
+  {
+    "id": 196,
+    "name": "Women's Circle-Handle Straw Tote Bag",
+    "category": "Accessories",
+    "sub_category": "Handbag",
+    "gender": "Women",
+    "brand": "Sun Striders",
+    "price": 5810.00,
+    "currency": "INR",
+    "color": "Natural",
+    "material": "Straw",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.7,
+      "count": 680
+    },
+    "description": "A chic straw tote bag with trendy circular wooden handles, perfect for the beach or market.",
+    "keywords": ["straw bag", "tote", "beach bag", "summer"],
+    "img_url": "https://picsum.photos/seed/196/400/600"
+  },
+  {
+    "id": 197,
+    "name": "Men's Wool Flat Cap",
+    "category": "Accessories",
+    "sub_category": "Hat",
+    "gender": "Men",
+    "brand": "Riverbend",
+    "price": 3735.00,
+    "currency": "INR",
+    "color": "Gray Herringbone",
+    "material": "Wool",
+    "available_sizes": ["M", "L"],
+    "rating": {
+      "rate": 4.6,
+      "count": 550
+    },
+    "description": "A classic flat cap (ivy cap) in a gray herringbone wool for a vintage-inspired look.",
+    "keywords": ["flat cap", "ivy cap", "wool", "heritage"],
+    "img_url": "https://picsum.photos/seed/197/400/600"
+  },
+  {
+    "id": 198,
+    "name": "Women's Bike Shorts",
+    "category": "Activewear",
+    "sub_category": "Shorts",
+    "gender": "Women",
+    "brand": "FlexFit",
+    "price": 3320.00,
+    "currency": "INR",
+    "color": "Black",
+    "material": "Nylon/Spandex",
+    "available_sizes": ["XS", "S", "M", "L"],
+    "rating": {
+      "rate": 4.8,
+      "count": 1300
+    },
+    "description": "Comfortable and trendy high-waisted bike shorts for workouts or casual wear.",
+    "keywords": ["bike shorts", "athleisure", "activewear", "trendy"],
+    "img_url": "https://picsum.photos/seed/198/400/600"
+  },
+  {
+    "id": 199,
+    "name": "Men's Lapel Pin",
+    "category": "Accessories",
+    "sub_category": "Pin",
+    "gender": "Men",
+    "brand": "Prestige Wear",
+    "price": 2075.00,
+    "currency": "INR",
+    "color": "Silver",
+    "material": "Metal",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 4.9,
+      "count": 450
+    },
+    "description": "A subtle and elegant silver lapel pin to add a touch of personality to a suit jacket.",
+    "keywords": ["lapel pin", "accessory", "formal", "dapper"],
+    "img_url": "https://picsum.photos/seed/199/400/600"
+  },
+  {
+    "id": 200,
+    "name": "Women's Cashmere Travel Wrap",
+    "category": "Accessories",
+    "sub_category": "Scarf",
+    "gender": "Women",
+    "brand": "EchoStyle",
+    "price": 16500.00,
+    "currency": "INR",
+    "color": "Beige",
+    "material": "Cashmere",
+    "available_sizes": ["One Size"],
+    "rating": {
+      "rate": 5,
+      "count": 980
+    },
+    "description": "A large, luxurious, and versatile cashmere wrap, perfect for travel or as an elegant shawl.",
+    "keywords": ["cashmere wrap", "travel", "luxury", "shawl"],
+    "img_url": "https://picsum.photos/seed/200/400/600"
+  }
+]

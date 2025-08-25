@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Search as SearchIcon, X, Filter, Grid, List, Mic, MicOff, Upload, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,16 +8,42 @@ import FilterSidebar from '@/components/common/FilterSidebar';
 import { ProductCardSkeleton } from '@/components/common/LoadingSkeleton';
 import { cn } from '@/lib/utils';
 
-// Assuming a product structure from your backend
+// Image URL converter utility
+const convertImgBBUrl = (url) => {
+  if (!url) return null;
+  
+  // Check if it's already a direct image URL
+  if (url.includes('i.ibb.co/')) {
+    return url;
+  }
+  
+  // Check if it's an ImgBB page URL
+  if (url.includes('ibb.co/')) {
+    // Extract the image ID from the URL
+    const match = url.match(/ibb\.co\/(?:img\/)?([a-zA-Z0-9]+)/);
+    
+    if (match) {
+      const imageId = match[1];
+      // Convert to direct URL
+      return `https://i.ibb.co/${imageId}/${imageId}.jpg`;
+    }
+  }
+  
+  // If it's not an ImgBB URL, return as is
+  return url;
+};
+
+// Interface for a single product from the backend
 interface Product {
   _id: string;
-  img: string; // Corrected from imageUrl to img
+  img: string;
   brand: string;
   name: string;
   price: number;
-  tags?: string[]; // Making tags optional as they might not always be present
+  tags?: string[];
 }
 
+// Interface for the entire API response
 interface SearchResults {
   products: Product[];
   count: number;
@@ -47,17 +74,16 @@ const Search = () => {
   const [isListening, setIsListening] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // --- UNIFIED SEARCH FUNCTION (NOW HANDLES IMAGE UPLOADS) ---
+  // --- UNIFIED SEARCH FUNCTION ---
   const executeSearch = useCallback(async (query: string, image: File | null, filters: any, page = 1) => {
     if (!query.trim() && !image) return;
     setLoading(true);
-    setSearchResults(null); // Clear previous results
+    setSearchResults(null); // Clear previous results for a new search
     try {
         let body: FormData | string;
         let headers: HeadersInit = {};
 
         if (image) {
-            // Use FormData when an image is present
             const formData = new FormData();
             formData.append('image', image);
             formData.append('query', query);
@@ -65,9 +91,7 @@ const Search = () => {
             formData.append('page', page.toString());
             formData.append('limit', '12');
             body = formData;
-            // NOTE: Do NOT set Content-Type header for FormData, the browser does it automatically
         } else {
-            // Use JSON for text-only search
             body = JSON.stringify({
                 query: query,
                 filters: filters,
@@ -85,6 +109,7 @@ const Search = () => {
 
       if (response.ok) {
         const results = await response.json();
+        console.log('Search results:', results);
         setSearchResults(results);
       } else {
         const errorData = await response.json();
@@ -101,7 +126,6 @@ const Search = () => {
 
   // --- EVENT HANDLERS ---
   const handleSearch = () => {
-    // When initiating a new search, we pass the current state
     executeSearch(searchText.trim(), uploadedImage, activeFilters);
   };
 
@@ -146,14 +170,13 @@ const Search = () => {
 
     recognition.onstart = () => setIsListening(true);
     recognition.onend = () => setIsListening(false);
-    recognition.onerror = (event) => {
+    recognition.onerror = (event: any) => {
       console.error('Speech recognition error:', event.error);
       setIsListening(false);
     };
-    recognition.onresult = (event) => {
+    recognition.onresult = (event: any) => {
       const transcript = event.results[0][0].transcript;
       setSearchText(transcript);
-      // Automatically trigger search after speech is recognized
       executeSearch(transcript, uploadedImage, activeFilters);
     };
     
@@ -180,11 +203,9 @@ const Search = () => {
     );
   }, []);
 
-  // --- Function to navigate to the comparison page ---
   const handleGoToCompare = () => {
     if (comparisonItems.length > 0) {
         const ids = comparisonItems.join(',');
-        // This assumes your routing is set up for a '/compare' page
         window.location.href = `/compare?ids=${ids}`;
     }
   };
@@ -330,11 +351,11 @@ const Search = () => {
             {searchResults && !loading && searchResults.products.length > 0 && (
               <div className={cn("grid gap-6", viewMode === 'grid' ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" : "grid-cols-1")}>
                 {searchResults.products.map((product) => (
-                  <ProductCard
-                    key={product._id}
-                    product={{ 
-                        id: product._id, 
-                        image: product.img, // Corrected from product.imageUrl
+                  <Link to={`/product/${product._id}`} key={product._id}>
+                    <ProductCard
+                      product={{
+                        id: product._id,
+                        img: convertImgBBUrl(product.img) || `https://via.placeholder.com/300x300?text=${encodeURIComponent(product.name)}`, // Convert ImgBB URL here
                         brand: product.brand,
                         name: product.name,
                         price: product.price,
@@ -345,7 +366,7 @@ const Search = () => {
                     isFavorite={favorites.includes(product._id)}
                     isInComparison={comparisonItems.includes(product._id)}
                     className={viewMode === 'list' ? 'flex flex-row' : ''}
-                  />
+                  /></Link>
                 ))}
               </div>
             )}

@@ -11,7 +11,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
 
 /**
  * @description Analyzes an image to identify fashion items and generate search terms.
@@ -30,6 +30,7 @@ async function getInfoFromImageAI(imageBuffer) {
         };
         const result = await model.generateContent([prompt, imagePart]);
         const response = await result.response;
+        console.log("AI Image Analysis Result:", response.text());
         return response.text().trim();
     } catch (error) {
         console.error("Error analyzing image with AI:", error);
